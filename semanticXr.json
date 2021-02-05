@@ -1,67 +1,321 @@
-{semanticXR:{
-
-	instructions:{
-		reality,
-		level,
-		scene,
-		frame,
-		accessibility:{visual, hearing, motor, communication, cognitive}
-	},
-
-	semanticElements:[
-		{
-    		semanticElementId,
-			name,
-			description,
-			physical:{ location:{x,y,z}, rotation:{...}, color(s), volume, form},
-			action:(standing|walking|running|flying|swimming),
-			categories:[landscape|landscapeArchitecture|architecture|internalDesign|prop|livingEntity|player|light|camera|controller|pointOfView|effect|music|north|semanticXR],			
-			
-			[<domain-specific-object>,],
-		}
-	,...],
-
-	pointsOfView:[
-		{
-			id:semanticElementId,
-			type:(firstPerson|thirdPerson|top|map|camera|pointingDevice),		
-			source:semanticElementId(player|camera|controller|binoculars),
-			visibleSemanticElements:[
-				{
-   					semanticElementId,
-					projectedSemanticElementCenter:{location:{x,y}, distance}, 
-				},
-			},...]
-			visualHitPoint:semanticElementId(soCanBeProjectedToMainView),
-			projectedColorImage:svg,
-			projectedSemanticElementIdsImage:svg,
-			projectedDepthMap:svg,
-			lens:{}
-		},...],
-
-	collisionDetection:{
-		forward:{semanticElementId, distance},
-		down:{semanticElementId, distance}
-	},
-
-	audio:{   
-		voices:[
-			{
-				source:semanticElementId,
-				target:semanticElementId,
-				text:[{language,text},...], originalLanguage, 
-				emotion
-			}
-		,...],
-		effects:[id:semanticElementId,...],
-		music:[{source:semanticElementId, description},...]
-	},
-
-	id:{
-    	realityType,
-		realityInstanceId,
-		realityInstanceTimestamp
-	},
-
-	schemaVersion
-}}
+{
+    "semanticXr": {
+        "schemaVersion": null,
+        "id": {
+            "realityName": null,
+            "realityInstanceId": null,
+            "realityInstanceTimestamp": null
+        },
+        "descriptions": {
+            "reality": null,
+            "scene": null,
+            "frame": null,
+            "accessibility": {
+                "visual": null,
+                "hearing": null,
+                "motor": null,
+                "communication": null,
+                "cognitive": null
+            },
+            "semanticSpatialEntities": [
+                {
+                    "semanticSpatialEntityId": null,
+                    "description": null
+                }
+            ]
+        },
+        "instructions": {
+            "reality": null,
+            "scene": null,
+            "frame": null,
+            "accessibility": {
+                "visual": null,
+                "hearing": null,
+                "motor": null,
+                "communication": null,
+                "cognitive": null
+            },
+            "semanticSpatialEntities": [
+                {
+                    "semanticSpatialEntityId": null,
+                    "description": null
+                }
+            ]
+        },
+        "semanticSpatialEntities:": [
+            {
+                "semanticSpatialEntityId": null,
+                "name": null,
+                "description": null,
+                "physical": {
+                    "location": {
+                        "x": null,
+                        "y": null,
+                        "z": null
+                    },
+                    "rotation": {
+                        "pitch": null,
+                        "yaw": null,
+                        "roll": null
+                    },
+                    "colors": null,
+                    "materials": null,
+                    "volume": null,
+                    "form": null
+                },
+                "action": null,
+                "categories": [],
+                "categoryAttributes": {
+                    "text": {
+                        "text": [
+                            {
+                                "language": null,
+                                "text": null
+                            },
+                            {
+                                "language": null,
+                                "text": null
+                            }
+                        ],
+                        "originalLanguage": null
+                    },
+                    "controller": {
+                        "type": null
+                    },
+                    "player": {
+                        "type": null,
+                        "state": null,
+                        "playerId": null
+                    },
+                    "livingEntity": {
+                        "type": null
+                    },
+                    "product": {
+                        "barcode": null
+                    },
+                    "person": {
+                        "age": null,
+                        "gender": null,
+                        "emotion": null
+                    }
+                }
+            }
+        ],
+        "pointsOfView": [
+            {
+                "id": null,
+                "description": null,
+                "source": null,
+                "visibleSemanticSpatialEntities": [
+                    {
+                        "semanticSpatialEntityId": null,
+                        "projectedsemanticSpatialEntityCenter": {
+                            "location": {
+                                "x": null,
+                                "y": null
+                            },
+                            "distance": null
+                        }
+                    },
+                    {
+                        "semanticSpatialEntityId": null,
+                        "projectedsemanticSpatialEntityCenter": {
+                            "location": {
+                                "x": null,
+                                "y": null
+                            },
+                            "distance": null
+                        }
+                    }
+                ],
+                "visualHitPoint": null,
+                "images": [
+                    {
+                        "type": "image",
+                        "value": null
+                    },
+                    {
+                        "type": "depthMap",
+                        "value": null
+                    },
+                    {
+                        "type": "semanticSegmentationWithsemanticSpatialEntityIds",
+                        "value": null
+                    },
+                    {
+                        "type": "preProcessedImage",
+                        "value": null
+                    },
+                    {
+                        "type": "realityTypeImage",
+                        "value": null
+                    }
+                ]
+            }
+        ],
+        "collisionDetection": [
+            {
+                "directionName": "forward",
+                "semanticSpatialEntityId": null,
+                "distance": null,
+                "directionRotation": {
+                    "pitch": null,
+                    "yaw": null,
+                    "roll": null
+                }
+            },
+            {
+                "directionName": "down",
+                "semanticSpatialEntityId": null,
+                "distance": null,
+                "directionRotation": {
+                    "pitch": null,
+                    "yaw": null,
+                    "roll": null
+                }
+            },
+            {
+                "directionName": "north",
+                "semanticSpatialEntityId": null,
+                "distance": null,
+                "directionRotation": {
+                    "pitch": null,
+                    "yaw": null,
+                    "roll": null
+                }
+            }
+        ],
+        "relations": {
+            "semanticLevelOfDetail": [
+                {
+                    "id": null,
+                    "children": []
+                },
+                {
+                    "id": null,
+                    "children": [
+                        {
+                            "id": null,
+                            "children": [
+                                {
+                                    "id": null,
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": null,
+                            "children": []
+                        }
+                    ]
+                }
+            ],
+            "crossSemanticXrEquality": {
+                "spatial": [
+                    [
+                        {
+                            "realityType": null,
+                            "realityInstanceId": null,
+                            "semanticSpatialEntityId": null
+                        },
+                        {
+                            "realityType": null,
+                            "realityInstanceId": null,
+                            "semanticSpatialEntityId": null
+                        },
+                        {
+                            "realityType": null,
+                            "realityInstanceId": null,
+                            "semanticSpatialEntityId": null
+                        }
+                    ],
+                    [
+                        {
+                            "realityType": null,
+                            "realityInstanceId": null,
+                            "semanticSpatialEntityId": null
+                        },
+                        {
+                            "realityType": null,
+                            "realityInstanceId": null,
+                            "semanticSpatialEntityId": null
+                        }
+                    ]
+                ],
+                "temporal": [
+                    [
+                        {
+                            "realityType": null,
+                            "realityInstanceId": null,
+                            "realityInstanceTimestamp": null
+                        },
+                        {
+                            "realityType": null,
+                            "realityInstanceId": null,
+                            "realityInstanceTimestamp": null
+                        }
+                    ],
+                    [
+                        {
+                            "realityType": null,
+                            "realityInstanceId": null,
+                            "realityInstanceTimestamp": null
+                        },
+                        {
+                            "realityType": null,
+                            "realityInstanceId": null,
+                            "realityInstanceTimestamp": null
+                        }
+                    ]
+                ]
+            },
+            "audio": {
+                "voices": [
+                    {
+                        "source": null,
+                        "target": null,
+                        "text": {
+                            "text": [
+                                {
+                                    "language": null,
+                                    "text": null
+                                },
+                                {
+                                    "language": null,
+                                    "text": null
+                                }
+                            ],
+                            "originalLanguage": null
+                        },
+                        "emotion": null,
+                        "sourceVoiceVolume": null,
+                        "timeRange": {
+                            "startTime": null,
+                            "estimatedEndTime": null
+                        },
+                        "audio": null
+                    }
+                ],
+                "effects": [
+                    {
+                        "id": null
+                    },
+                    {
+                        "id": null
+                    }
+                ],
+                "music": [
+                    {
+                        "id": null,
+                        "source": null,
+                        "timeRange": null,
+                        "audio": null,
+                        "musicalNotation": null,
+                        "lyrics": null,
+                        "description": null
+                    }
+                ]
+            }
+        }
+    }
+}
