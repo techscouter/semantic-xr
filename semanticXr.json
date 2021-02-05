@@ -10,13 +10,6 @@
 			"reality": null,
 			"scene": null,
 			"frame": null,
-			"accessibility": {
-				"visual": null,
-				"hearing": null,
-				"motor": null,
-				"communication": null,
-				"cognitive": null
-			},
 			"semanticSpatialEntities": [
 				{
 					"semanticSpatialEntityId": null,
@@ -29,10 +22,11 @@
 			"scene": null,
 			"frame": null,
 			"accessibility": {
-				"visual": null,
+				"general":null,
+				"vision": null,
 				"hearing": null,
 				"motor": null,
-				"communication": null,
+				"speech": null,
 				"cognitive": null
 			},
 			"semanticSpatialEntities": [
