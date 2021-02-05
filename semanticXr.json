@@ -1,0 +1,67 @@
+{semanticXR:{
+
+	instructions:{
+		reality,
+		level,
+		scene,
+		frame,
+		accessibility:{visual, hearing, motor, communication, cognitive}
+	},
+
+	semanticElements:[
+		{
+    		semanticElementId,
+			name,
+			description,
+			physical:{ location:{x,y,z}, rotation:{...}, color(s), volume, form},
+			action:(standing|walking|running|flying|swimming),
+			categories:[landscape|landscapeArchitecture|architecture|internalDesign|prop|livingEntity|player|light|camera|controller|pointOfView|effect|music|north|semanticXR],			
+			
+			[<domain-specific-object>,],
+		}
+	,...],
+
+	pointsOfView:[
+		{
+			id:semanticElementId,
+			type:(firstPerson|thirdPerson|top|map|camera|pointingDevice),		
+			source:semanticElementId(player|camera|controller|binoculars),
+			visibleSemanticElements:[
+				{
+   					semanticElementId,
+					projectedSemanticElementCenter:{location:{x,y}, distance}, 
+				},
+			},...]
+			visualHitPoint:semanticElementId(soCanBeProjectedToMainView),
+			projectedColorImage:svg,
+			projectedSemanticElementIdsImage:svg,
+			projectedDepthMap:svg,
+			lens:{}
+		},...],
+
+	collisionDetection:{
+		forward:{semanticElementId, distance},
+		down:{semanticElementId, distance}
+	},
+
+	audio:{   
+		voices:[
+			{
+				source:semanticElementId,
+				target:semanticElementId,
+				text:[{language,text},...], originalLanguage, 
+				emotion
+			}
+		,...],
+		effects:[id:semanticElementId,...],
+		music:[{source:semanticElementId, description},...]
+	},
+
+	id:{
+    	realityType,
+		realityInstanceId,
+		realityInstanceTimestamp
+	},
+
+	schemaVersion
+}}
