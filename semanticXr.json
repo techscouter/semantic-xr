@@ -52,8 +52,8 @@
 						"yaw": null,
 						"roll": null
 					},
-					"colors": null,
-					"materials": null,
+					"colors": [],
+					"materials": [],
 					"volume": null,
 					"form": null
 				},
@@ -78,7 +78,7 @@
 					},
 					"player": {
 						"type": null,
-						"state": null,
+						"state": {},
 						"playerId": null
 					},
 					"livingEntity": {
@@ -182,23 +182,23 @@
 		"relations": {
 			"semanticLevelOfDetail": [
 				{
-					"id": null,
+					"semanticSpatialEntityId": null,
 					"children": []
 				},
 				{
-					"id": null,
+					"semanticSpatialEntityId": null,
 					"children": [
 						{
-							"id": null,
+							"semanticSpatialEntityId": null,
 							"children": [
 								{
-									"id": null,
+									"semanticSpatialEntityId": null,
 									"children": []
 								}
 							]
 						},
 						{
-							"id": null,
+							"semanticSpatialEntityId": null,
 							"children": []
 						}
 					]
@@ -292,15 +292,15 @@
 				],
 				"effects": [
 					{
-						"id": null
+						"semanticSpatialEntityId": null
 					},
 					{
-						"id": null
+						"semanticSpatialEntityId": null
 					}
 				],
 				"music": [
 					{
-						"id": null,
+						"semanticSpatialEntityId": null,
 						"source": null,
 						"timeRange": null,
 						"audio": null,
