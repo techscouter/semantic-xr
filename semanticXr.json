@@ -6,6 +6,11 @@
 			"realityInstanceId": null,
 			"realityInstanceTimestamp": null
 		},
+		"units":{
+			"time":null,
+			"space":null,
+			"language": null
+		},
 		"descriptions": {
 			"reality": null,
 			"scene": null,
