@@ -262,6 +262,11 @@
 					{
 						"source": null,
 						"target": null,
+						"directionRotation": {
+							"pitch": null,
+							"yaw": null,
+							"roll": null
+						},		
 						"text": {
 							"text": [
 								{
@@ -275,11 +280,6 @@
 							],
 							"originalLanguage": null
 						},
-						"directionRotation": {
-							"pitch": null,
-							"yaw": null,
-							"roll": null
-						},		
 						"emotion": null,
 						"sourceVoiceVolume": null,
 						"timeRange": {
