@@ -14,13 +14,7 @@
 		"descriptions": {
 			"reality": null,
 			"scene": null,
-			"frame": null,
-			"semanticSpatialEntities": [
-				{
-					"semanticSpatialEntityId": null,
-					"description": null
-				}
-			]
+			"frame": null
 		},
 		"instructions": {
 			"reality": null,
