@@ -286,6 +286,11 @@
 							],
 							"originalLanguage": null
 						},
+						"directionRotation": {
+							"pitch": null,
+							"yaw": null,
+							"roll": null
+						},		
 						"emotion": null,
 						"sourceVoiceVolume": null,
 						"timeRange": {
