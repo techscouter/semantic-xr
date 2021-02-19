@@ -312,7 +312,10 @@
 					{
 						"semanticSpatialEntityId": null,
 						"source": null,
-						"timeRange": null,
+						"timeRange": {
+							"startTime": null,
+							"estimatedEndTime": null
+						},
 						"audio": null,
 						"musicalNotation": null,
 						"lyrics": null,
