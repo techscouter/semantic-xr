@@ -27,13 +27,7 @@
 				"motor": null,
 				"speech": null,
 				"cognitive": null
-			},
-			"semanticSpatialEntities": [
-				{
-					"semanticSpatialEntityId": null,
-					"description": null
-				}
-			]
+			}
 		},
 		"semanticSpatialEntities:": [
 			{
@@ -73,7 +67,8 @@
 						"originalLanguage": null
 					},
 					"controller": {
-						"type": null
+						"type": null,
+						"instructions":null
 					},
 					"player": {
 						"type": null,
