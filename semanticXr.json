@@ -6,9 +6,9 @@
 			"realityInstanceId": null,
 			"realityInstanceTimestamp": null
 		},
-		"units":{
-			"time":null,
-			"space":null,
+		"units": {
+			"time": null,
+			"space": null,
 			"language": null
 		},
 		"descriptions": {
@@ -21,7 +21,7 @@
 			"scene": null,
 			"frame": null,
 			"accessibility": {
-				"general":null,
+				"general": null,
 				"vision": null,
 				"hearing": null,
 				"motor": null,
@@ -68,7 +68,7 @@
 					},
 					"controller": {
 						"type": null,
-						"instructions":null
+						"instructions": null
 					},
 					"player": {
 						"type": null,
@@ -173,6 +173,61 @@
 				}
 			}
 		],
+		"audio": {
+			"voices": [
+				{
+					"source": null,
+					"target": null,
+					"directionRotation": {
+						"pitch": null,
+						"yaw": null,
+						"roll": null
+					},
+					"text": {
+						"text": [
+							{
+								"language": null,
+								"text": null
+							},
+							{
+								"language": null,
+								"text": null
+							}
+						],
+						"originalLanguage": null
+					},
+					"emotion": null,
+					"sourceVoiceVolume": null,
+					"timeRange": {
+						"startTime": null,
+						"estimatedEndTime": null
+					},
+					"audio": null
+				}
+			],
+			"effects": [
+				{
+					"semanticSpatialEntityId": null
+				},
+				{
+					"semanticSpatialEntityId": null
+				}
+			],
+			"music": [
+				{
+					"semanticSpatialEntityId": null,
+					"source": null,
+					"timeRange": {
+						"startTime": null,
+						"estimatedEndTime": null
+					},
+					"audio": null,
+					"musicalNotation": null,
+					"lyrics": null,
+					"description": null
+				}
+			]
+		},
 		"relations": {
 			"semanticLevelOfDetail": [
 				{
@@ -255,61 +310,6 @@
 							"realityInstanceTimestamp": null
 						}
 					]
-				]
-			},
-			"audio": {
-				"voices": [
-					{
-						"source": null,
-						"target": null,
-						"directionRotation": {
-							"pitch": null,
-							"yaw": null,
-							"roll": null
-						},		
-						"text": {
-							"text": [
-								{
-									"language": null,
-									"text": null
-								},
-								{
-									"language": null,
-									"text": null
-								}
-							],
-							"originalLanguage": null
-						},
-						"emotion": null,
-						"sourceVoiceVolume": null,
-						"timeRange": {
-							"startTime": null,
-							"estimatedEndTime": null
-						},
-						"audio": null
-					}
-				],
-				"effects": [
-					{
-						"semanticSpatialEntityId": null
-					},
-					{
-						"semanticSpatialEntityId": null
-					}
-				],
-				"music": [
-					{
-						"semanticSpatialEntityId": null,
-						"source": null,
-						"timeRange": {
-							"startTime": null,
-							"estimatedEndTime": null
-						},
-						"audio": null,
-						"musicalNotation": null,
-						"lyrics": null,
-						"description": null
-					}
 				]
 			}
 		}
