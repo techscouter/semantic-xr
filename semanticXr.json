@@ -91,13 +91,12 @@
 		],
 		"pointsOfView": [
 			{
-				"id": null,
-				"description": null,
+				"semanticSpatialEntityId": null,
 				"source": null,
 				"visibleSemanticSpatialEntities": [
 					{
 						"semanticSpatialEntityId": null,
-						"projectedsemanticSpatialEntityCenter": {
+						"projectedSemanticSpatialEntityCenter": {
 							"location": {
 								"x": null,
 								"y": null
@@ -107,7 +106,7 @@
 					},
 					{
 						"semanticSpatialEntityId": null,
-						"projectedsemanticSpatialEntityCenter": {
+						"projectedSemanticSpatialEntityCenter": {
 							"location": {
 								"x": null,
 								"y": null
