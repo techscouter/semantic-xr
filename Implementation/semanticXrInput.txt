@@ -8,7 +8,7 @@ sxr.categoriesAndAttributes=[{"category":,"attributes":[{"name":,"value":},...}]
 sxr.actions=[{"animationState":,"actionName":},...]
 sxr.pointOfView={"translation":,"rotation":}
 sxr.collisionDetection=[{"direction":{"name":,"rotation":},...]
-sxr.crossSemanticXrEquality.spatial=[{"realityType":,"realityInstanceId":,"semanticSpatialEntityId":},...]
+sxr.crossSemanticXrEquality=[{"realityType":,"realityInstanceId":,"realityInstanceTimestamp":,"semanticSpatialEntityId":},...]
 
 Actor Tags for Scene Box/Sphere Trigger (activate overlapping innermost volume)
 ===============================================================================

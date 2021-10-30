@@ -252,65 +252,48 @@
 					]
 				}
 			],
-			"crossSemanticXrEquality": {
-				"spatial": [
-					[
-						{
-							"realityType": null,
-							"realityInstanceId": null,
-							"semanticSpatialEntityId": null
-						},
-						{
-							"realityType": null,
-							"realityInstanceId": null,
-							"semanticSpatialEntityId": null
-						},
-						{
-							"realityType": null,
-							"realityInstanceId": null,
-							"semanticSpatialEntityId": null
-						}
-					],
-					[
-						{
-							"realityType": null,
-							"realityInstanceId": null,
-							"semanticSpatialEntityId": null
-						},
-						{
-							"realityType": null,
-							"realityInstanceId": null,
-							"semanticSpatialEntityId": null
-						}
-					]
+			"crossSemanticXrEquality": [
+				[
+					{
+						"realityType": null,
+						"realityInstanceId": null,
+						"realityInstanceTimestamp": null,
+						"semanticSpatialEntityId": null
+					},
+					{
+						"realityType": null,
+						"realityInstanceId": null,
+						"realityInstanceTimestamp": null,
+						"semanticSpatialEntityId": null
+					}
 				],
-				"temporal": [
-					[
-						{
-							"realityType": null,
-							"realityInstanceId": null,
-							"realityInstanceTimestamp": null
-						},
-						{
-							"realityType": null,
-							"realityInstanceId": null,
-							"realityInstanceTimestamp": null
-						}
-					],
-					[
-						{
-							"realityType": null,
-							"realityInstanceId": null,
-							"realityInstanceTimestamp": null
-						},
-						{
-							"realityType": null,
-							"realityInstanceId": null,
-							"realityInstanceTimestamp": null
-						}
-					]
+				[
+					{
+						"realityType": null,
+						"realityInstanceId": null,
+						"realityInstanceTimestamp": null,
+						"semanticSpatialEntityId": null
+					},
+					{
+						"realityType": null,
+						"realityInstanceId": null,
+						"realityInstanceTimestamp": null,
+						"semanticSpatialEntityId": null
+					},
+					{
+						"realityType": null,
+						"realityInstanceId": null,
+						"realityInstanceTimestamp": null,
+						"semanticSpatialEntityId": null
+					},
+					{
+						"realityType": null,
+						"realityInstanceId": null,
+						"realityInstanceTimestamp": null,
+						"semanticSpatialEntityId": null
+					}
 				]
-			}
+			]
 		}
 	}
 }
