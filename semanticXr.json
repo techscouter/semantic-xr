@@ -126,7 +126,11 @@
 						"value": null
 					},
 					{
-						"type": "semanticSegmentationWithSemanticSpatialEntityIds",
+						"type": "instanceSegmentationWithSemanticSpatialEntityId",
+						"value": null
+					},
+					{
+						"type": "semanticSegmentationWithSemanticSpatialEntityCategory",
 						"value": null
 					},
 					{
