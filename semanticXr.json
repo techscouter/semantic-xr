@@ -2,7 +2,7 @@
 	"semanticXr": {
 		"schemaVersion": null,
 		"id": {
-			"realityName": null,
+			"realityId": null,
 			"realityInstanceId": null,
 			"realityInstanceTimestamp": null
 		},
@@ -51,42 +51,16 @@
 					"form": null
 				},
 				"actions": [],
-				"categories": [],
-				"categoryAttributes": {
-					"text": {
-						"text": [
-							{
-								"language": null,
-								"text": null
-							},
-							{
-								"language": null,
-								"text": null
-							}
-						],
-						"originalLanguage": null
+				"categoriesAndAttributes": [
+					{
+						"category":null,
+						"attributes": {}
 					},
-					"controller": {
-						"type": null,
-						"instructions": null
-					},
-					"player": {
-						"type": null,
-						"state": {},
-						"playerId": null
-					},
-					"livingEntity": {
-						"type": null
-					},
-					"product": {
-						"barcode": null
-					},
-					"person": {
-						"age": null,
-						"gender": null,
-						"emotion": null
+					{
+						"category":null,
+						"attributes": {}
 					}
-				}
+				]
 			}
 		],
 		"pointsOfView": [
@@ -148,6 +122,7 @@
 			{
 				"directionName": "forward",
 				"semanticSpatialEntityId": null,
+				"name": null,
 				"distance": null,
 				"directionRotation": {
 					"pitch": null,
@@ -158,6 +133,7 @@
 			{
 				"directionName": "down",
 				"semanticSpatialEntityId": null,
+				"name":null,
 				"distance": null,
 				"directionRotation": {
 					"pitch": null,
@@ -168,6 +144,7 @@
 			{
 				"directionName": "north",
 				"semanticSpatialEntityId": null,
+				"name":null,
 				"distance": null,
 				"directionRotation": {
 					"pitch": null,
