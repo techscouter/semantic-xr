@@ -53,4 +53,4 @@ This is still an **experimental technology in research phase** and comes with se
 * There are **accessibility categories that would be difficult to support** by relying only on the semantic format. For example: content related (such as puzzle hints) and deep modifications (such as avoiding shaky camera movements).
 
 # Tags-based approach for how to implement a semantic generator
-Included is a [tags-based approach on how to implement a generator library for this format](Implementation/semanticXrImplementation.md) that leverages game engine capabilities for its purpose. It includes a list of the tags that are needed to generate Semantic-XR based on game engine capabilities.
+Included is a [tags-based approach on how to implement a generator library for this format](Implementation/semanticXrTagsBasedApproach.md) that leverages game engine capabilities for its purpose. It includes a list of the tags that are needed to generate Semantic-XR based on game engine capabilities.
