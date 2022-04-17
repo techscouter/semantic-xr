@@ -2,15 +2,49 @@
 This repository describes an accessibility-focused semantic 3D scene description format: a description of an XR experience as meaningful and well-defined data in order to make it more accessible.
 
 # Background and Motivation
-With the growing interest in XR experiences (also known as metaverse(s)) we should not leave anyone behind and enable any person who is interested in it to meaningfully participate in existing and future virtual worlds. The focus of the described format is to make XR experiences or metaverse(s) more accessible for people with disabilities. Please note that this is still an experimental technology in research phase and comes with its challenges (there is a dedicated Challenges section below).
-
+With the growing interest in XR experiences (also known as metaverse(s)) we should not leave anyone behind and enable any person who is interested in it to meaningfully participate in existing and future virtual worlds. The focus of the described format is to make XR experiences or metaverse(s) more accessible for people with disabilities.  
+  
+This **semantic** format is still experimental but has the potential to open up many opportunities: first, it **unifies all types of 3D realities and content** (like 3D games and virtual worlds, VR, MR, AR, the real world, videos, TV, films, pictures etc.). Second, it provides **a way to connect between these different realities**. Third, it enables 3rd-party XR assistive technology creators to **build accessibility solutions in a decoupled way**, without requiring a very deep knowledge of the media internals. Fourth, these accessibility solutions could enable a high degree of **personalization** for their users which is highly desired. The fifth advantage of this format is based on preliminary work of implementing a game engine-based generator for parts of this format. It looks like that content creators would be able to expose this semantic format with contents of their choosing **without a huge effort**, leveraging the power of their 3D authoring tools (like game engines) and using 3rd-party or even native support for Semantic-XR generation that would hopefully be implemeneted. And finally, the **format is extensible** to support different kinds of entities with their various attributes.  
+Please note that this is still an **experimental technology in research phase** and comes with its many challenges (there is a dedicated Challenges section below).
+  
 # Format
 The format itself is described in the file [semanticXr.json](semanticXr.json) which is a JSON file that serves as a template.
 
-# Usage Examples
-There are many usage examples provided. Like an example that [describes the semantic content of a scene from a demo 3D interactive environment](Examples/DemoGameCubes/DemoGameCubesREADME.md) (it is based on [my blog post about Making 3D Content More Accessible on the Web: "Semantic XR" Proof of Concept](http://accessiblerealities.com/blog/making-3d-content-more-accessible-on-the-web-semantic-xr-proof-of-concept/) ).  
-There are also [other examples and links to related videos](Examples/semanticXrExamples.md).
+# Examples
+## Example Image with a Semantic-XR Representation
+### Image
 
+![A single large cube on the floor (a bit to the right) with surrounding wall and cloudy sky](Examples/DemoGameCubes/DemoGameCubes2.png)  
+
+### Image's Semantic-XR
+
+        {
+            "semanticXr":{
+
+                "instructions":{
+                    "reality":"This is a 3D interactive story application. Use the keys W, A, S and D to move and Left and Right arrows to turn. Press Z to generate Semantic XR.",
+                    "scene":"You should reach the destination block (visually indicated blue) while avoiding the other blocks (visually indicated grey).",
+                    "frame":" block: right near"
+                },
+                
+                "semanticSpatialEntities":[
+                        {"semanticSpatialEntityId":"EditorCube8","name":"block","physical":{"location":{ "x":1073, "y":539, "z":113}}}],
+                
+                "collisionDetection":[
+                        {"directionName": "forward", "name":"obstacle", "distance":1701}
+                ],
+                
+                "id":{
+                    "realityId":"SemanticXrAccessibilityProofOfConcept",
+                    "realityInstanceId":"SemanticXrAccessibilityProofOfConcept2BB675B24CD2D1D3AEB1EDAF03CD68A0",
+                    "realityInstanceTimestamp":21.121567
+                }
+            }
+        }
+
+## More Examples
+There are many other usage examples provided. Like an example that [describes the semantic contents of scenes from a demo 3D interactive environment](Examples/DemoGameCubes/DemoGameCubesREADME.md) (it is based on [my blog post about Making 3D Content More Accessible on the Web: "Semantic XR" Proof of Concept](http://accessiblerealities.com/blog/making-3d-content-more-accessible-on-the-web-semantic-xr-proof-of-concept/)).   
+There are also [other examples and links to related videos](Examples/semanticXrExamples.md).  
 # Format Instructions
 Explanations for the format's fields can be found in [semanticXrInstructions.md](semanticXrInstructions.md).
 
