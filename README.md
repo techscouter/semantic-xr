@@ -58,7 +58,7 @@ Zohar Gan
 
 ## This repository is:
 * Focused on **accessibility** purposes.
-* Includes a **sementic** format which is a description of an XR experience as meaningful and well-defined data in order to make it more accessible. For example, it includes names and locations of objects.
+* Includes a **semantic** format which is a description of an XR experience as meaningful and well-defined data in order to make it more accessible. For example, it includes names and locations of objects.
 * Could enable **personalization of accessibility support**. For example, enabling description of the 3D locations of the objects in multiple ways and enabling the user to choose their preferred method of making things accessible.
 * **Designed for content creators** to expose the semantics of their media in order to make it accessible. Content creators like VR collaboration platforms' creators; AR/VR training and educational material producers; 3D game developers; video, animation and film studios (via game engine based virtual production) etc.
 * Could **unify all types of 3D realities and content**: 3D games and virtual worlds, AR, MR, VR, the real world, videos, TV, films, pictures, animations, sketches (and who knows, maybe even imagination and dreams in the future...). For example, names and locations of objects are common to all these realities, in addition to many more optional reality characteristics specified in the format.
