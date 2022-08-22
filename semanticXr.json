@@ -72,8 +72,8 @@
 						"semanticSpatialEntityId": null,
 						"projectedSemanticSpatialEntityCenter": {
 							"location": {
-								"x": null,
-								"y": null
+								"horizontalFraction": null,
+								"verticalFraction": null
 							},
 							"distance": null
 						}
@@ -82,8 +82,8 @@
 						"semanticSpatialEntityId": null,
 						"projectedSemanticSpatialEntityCenter": {
 							"location": {
-								"x": null,
-								"y": null
+								"horizontalFraction": null,
+								"verticalFraction": null
 							},
 							"distance": null
 						}

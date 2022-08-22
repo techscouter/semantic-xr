@@ -5,17 +5,20 @@
 * [Video of a Real Time 3D game (video)](https://youtu.be/Q7JY3w7StHo)
 
 ## Movie
-* [Movie](https://youtu.be/gh0vJOWk5EY) : depthMap image used for highlighting objects in a video and an image
-* Movie can be represented in Semantic-XR format by having no realityInstanceId and no realityInstanceTimestamp in the highest level semanticXr element. Child Semantic-XR entities do have timestamp and they represent frames in the movie. Virtual production methods using a game engine based Semantic-XR library could enable auto-generation of movie semantic descriptions. This could apply as well to animations.
+* [Movie](https://youtu.be/gh0vJOWk5EY) : depthMap image used for highlighting objects in a video and an image.
+* Movie can be represented in Semantic-XR format by having no realityInstanceId and no realityInstanceTimestamp in the highest level semanticXr element. Child Semantic-XR entities do have timestamp and they represent frames in the movie. Virtual production methods using a game engine based Semantic-XR library could enable auto-generation of movie semantic descriptions. This could apply as well to animations. BTW, this opens up the possibility of "invisible movies" - movies that exist as text-only in a Semantic-XR format. Another possibility is annotating old movies with Semantic-XR metadata to make them more accessible.
 
 ## Real World
 * [Audio-based AR (video).](https://youtu.be/Lsri6037iIE) This example uses AI (object recognition cloud service) in contrast to other examples which use a game engine library to generate the Semantic-XR content.
+
+## Composite Semantic-XR
+* For example a computer screen or a cinema screen inside VR or photographs or TV shows in passthrough mode which are Semantic-XR entities by themselves (advanced usage of this could be used for reflections and/or views behind transparent surfaces).
 
 ## crossSemanticXrEquality examples
 This single field opens up a lot of opportunities, such as conveying equality of entities in space and time. For example:
 
 ### Live Broadcast
-In this case, there is the event and the live TV broadcast shown on two specific TV sets that are all synced in time. Note the absence of realityInstanceTimestamp (time is the same in all 3 realities since the Time unit is seconds) and the absence of semanticSpatialEntityId (entities are the same in all realities).
+In this case, there is the event and the live TV broadcast shown on two specific TV sets that are all synced in time. Note the absence of realityInstanceTimestamp (time is the same in all 3 realities) and the absence of semanticSpatialEntityId (entities are the same in all realities).
 
         "crossSemanticXrEquality":
         [
@@ -166,7 +169,7 @@ A character (Human1) that appears throughout a movie (TimeTravelMovie1) and appe
         ]
         
 ### Non-Fungible Tokens (NFTs)
-Same NFT image that serves as an avatar in a certain virtual world while serving as a background image in a different virtual world.
+Same portrait NFT image that serves as an avatar in a certain virtual world while serving as a background image in a different virtual world.
 
         "crossSemanticXrEquality":
         [

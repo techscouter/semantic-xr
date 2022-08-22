@@ -1,7 +1,7 @@
 # Semantic-XR Instructions
 This section includes explanations for the fields of the semantic format. Examples for values for some of the fields can be found in the documents in the Examples folder. The fields are mostly optional. Note that some of the definitions are a bit loose - this is both part of the early stage and research phase of this format and both for enabling creative uses for its users.
 
-## Semantic-XR fields' explanations
+## Semantic XR fields' explanations
 
 * `semanticXr`: a description of an XR experience as meaningful and well-defined data in order to make it more accessible. The root element of the file.
 
@@ -31,9 +31,9 @@ This section includes explanations for the fields of the semantic format. Exampl
     * `general` : general accessibility information. For example, pointer to an accessibility document for the game.
     * `vision` : accessibility information for people who are blind or have low vision. For example, how to enable internal text to speech engine.
     * `hearing` : accessibility information for people who are deaf or hard of hearing. For example, how to enable captions.
-    * `motor`
-    * `speech`
-    * `cognitive`: for example, how to access the instructions and descriptions.
+    * `motor` : for example information about options for remapping of controls.
+    * `speech` : for example a list of input methods not requiring speech.
+    * `cognitive`: for example how to access the instructions and descriptions.
 
 * `semanticSpatialEntities` : the main list of semantic spatial entities with their properties.
   * `semanticSpatialEntityId` : an id that uniquely identifies this entity in this reality.
@@ -55,24 +55,25 @@ This section includes explanations for the fields of the semantic format. Exampl
 
 * `pointsOfView` : points in space from which spatial related data is generated
   * `semanticSpatialEntityId` : the pointOfView itself is a semanticSpatialEntity with location, rotation etc.
-  * `source` : semanticSpatialEntityId of the entity which is the source of this pointOfView (for example, the player, a camera or a controller).
+  * `source` : semanticSpatialEntityId of the entity which is the source of this pointOfView (for example, the player, a camera, a controller, an eye etc.).
   * `visibleSemanticSpatialEntities` : array of all semantic spatial entities that are visible from this point of view.
     * `semanticSpatialEntityId`
 	* `projectedSemanticSpatialEntityCenter` : properties of the center point of the semantic spatial entity.
-	  * `location` : the x,y coordinates of the projection of the semantic spatial entity on this point of view.
-        * `x` : fraction of width (0=left, 0.5=middle, 1=right).
-        * `y` : fraction of height (0=top, 0.5=middle height, 1=bottom).
+	  * `location` : the coordinates of the projection of the semantic spatial entity on this point of view.
+        * `horizontalFraction` : fraction of width (0=left, 0.5=middle, 1=right).
+        * `verticalFraction` : fraction of height (0=top, 0.5=middle height, 1=bottom).
       * `distance` : distance from this point of view in space units.
   * `visualHitPoint` : semanticSpatialEntityId of the extrapolated hit point of this pointOfView with the 3D space in front of it. For example, a controller-based point of view's hit point id would enable using it as a laser pointer and have it read aloud text, name of pointed entity, distance to an entity etc.
-  * `images` : optional images generated from this point of view. As this is a JSON file there is a need to do BASE64 encoding of the data and **verify** the data source for security reasons. Data URLs might be useful here with their pros and cons.
+  * `images` : optional images generated from this point of view. As this is a JSON file there is a need to do BASE64 encoding of the data and **verify** the data source for security reasons. Data URLs might be useful here with their pros and cons. Note that images can be for example 360 degrees images or be in other kinds of shapes, types of data and formats. Example types of images:
     * value of type "image ": regular RGB image of the frame
     * value of type "depthMap" : depth map
     * value of type "instanceSegmentationWithSemanticSpatialEntityId" : instance segmentation - each instance is identified by its semanticSpatialEntityId.
     * value of type "semanticSegmentationWithSemanticSpatialEntityCategory" : semantic segmentation - each category is taken from the category property of the instance (see "instanceSegmentationWithSemanticSpatialEntityId")
     * value of type "preProcessedImage" : RGB image before applying any effects like blur etc. which could be problematic from an accessibility perspective.
-    * value of type "realityTypeImage" : marking each area of the field of view with the type of reality it represenets - real world, VR, passthrough etc.
+    * value of type "realityTypeImage" : marking each area of the field of view with the type of reality it represenets - real world, VR, passthrough etc.  
 
-* `collisionDetection` : what the player would collide with if it would have moved in a specific direction. Could enable for example to assist low vision players with indication of what's in front of them or with footsteps sounds that fit the type of surface the player walks on.
+  Note: in case of two eyes' inputs for example in VR or glasses-based AR that would require pairs of images - one for each eye - this could be achieved using the existing support for multiple points of view (they would just be associated with the same player - left eye and right eye)
+* `collisionDetection` : what the player would collide with if they would have moved in a specific direction. Could enable for example to assist players with low vision with indication of what's in front of them or with footsteps sounds that fit the type of surface that the player walks on.
   * `directionName` : one of predefined direction names ('forward', 'backward', 'up' and 'down').
   * `semanticSpatialEntityId` : the id of the entity the player would collide with.
   * `name` : the name of the entity the player would collide with.
@@ -128,4 +129,4 @@ This section includes explanations for the fields of the semantic format. Exampl
 		  * `semanticSpatialEntityId`
 		  * `}...`
 		* `]...`
-      * `[` : end of an array of equal entities
+      * `]` : end of an array of equal entities
