@@ -93,27 +93,51 @@
 				"images": [
 					{
 						"type": "image",
-						"value": null
+						"value": null,
+						"legend": null,
+						"lens": null
 					},
 					{
 						"type": "depthMap",
-						"value": null
+						"value": null,
+						"legend": null,
+						"lens": null
 					},
 					{
-						"type": "instanceSegmentationWithSemanticSpatialEntityId",
-						"value": null
+						"type": "instanceSegmentation",
+						"value": null,
+						"legend": null,
+						"lens": null
 					},
 					{
-						"type": "semanticSegmentationWithSemanticSpatialEntityCategory",
-						"value": null
+						"type": "semanticSegmentation",
+						"value": null,
+						"legend": null,
+						"lens": null
 					},
 					{
 						"type": "preProcessedImage",
-						"value": null
+						"value": null,
+						"legend": null,
+						"lens": null
 					},
 					{
 						"type": "realityTypeImage",
-						"value": null
+						"value": null,
+						"legend": null,
+						"lens": null
+					},
+					{
+						"type": "edges",
+						"value": null,
+						"legend": null,
+						"lens": null
+					},
+					{
+						"type": "normals",
+						"value": null,
+						"legend": null,
+						"lens": null
 					}
 				]
 			}
