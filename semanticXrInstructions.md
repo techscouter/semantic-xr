@@ -39,6 +39,7 @@ This section includes explanations for the fields of the semantic format. Exampl
   * `semanticSpatialEntityId` : an id that uniquely identifies this entity in this reality.
     * `name` : natural language name of this entity.
     * `description` : short natural language description of this entity.
+    * `instructions` : instructions for this entity (for example: for operating it or interacting with it).
     * `physical` : physical properties of this entity.
       * `location` : location of the entity. All entities' locations should be in the same coordinate system.
         * `x`, `y`, `z` : location of the entity across the different axis. <TBD>

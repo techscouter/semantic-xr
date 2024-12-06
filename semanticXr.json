@@ -34,6 +34,7 @@
 				"semanticSpatialEntityId": null,
 				"name": null,
 				"description": null,
+				"instructions": null,
 				"physical": {
 					"location": {
 						"x": null,
