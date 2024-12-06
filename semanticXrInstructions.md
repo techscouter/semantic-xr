@@ -39,7 +39,7 @@ This section includes explanations for the fields of the semantic format. Exampl
   * `semanticSpatialEntityId` : an id that uniquely identifies this entity in this reality.
     * `name` : natural language name of this entity.
     * `description` : short natural language description of this entity.
-    * `instructions` : instructions for this entity (for example: for operating it or interacting with it).
+    * `instructions` : instructions for this entity (for example, for operating it or interacting with it).
     * `physical` : physical properties of this entity.
       * `location` : location of the entity. All entities' locations should be in the same coordinate system.
         * `x`, `y`, `z` : location of the entity across the different axis. <TBD>
@@ -54,9 +54,9 @@ This section includes explanations for the fields of the semantic format. Exampl
       * `category`: non comprehensive list of examples for categories of entities: landscape, landscapeArchitecture, architecture, internalDesign, prop, livingEntity, player, light, camera, controller, pointOfView, hitPoint, effect, music, text, table, chair, semanticXr etc. Note that the option to have semanticXr as a nested semanticSpatialEntity is extremely powerful (for usage examples see the Examples folder)
       * `attributes`: attributes and their values within the specific category. For example: for category 'text' the attributes could include the actual text in different languages. The value of the attributes field could include nested fields/arrays itself.
 
-* `pointsOfView` : points in space from which spatial related data is generated
+* `pointsOfView` : points in space from which view-based data is generated.
   * `semanticSpatialEntityId` : the pointOfView itself is a semanticSpatialEntity with location, rotation etc.
-  * `source` : semanticSpatialEntityId of the entity which is the source of this pointOfView (for example, the player, a camera, a controller, an eye etc.).
+  * `source` : semanticSpatialEntityId of the entity which is the source of this pointOfView (for example the player, a camera, a controller, an eye etc.).
   * `visibleSemanticSpatialEntities` : array of all semantic spatial entities that are visible from this point of view.
     * `semanticSpatialEntityId`
 	* `projectedSemanticSpatialEntityCenter` : properties of the center point of the semantic spatial entity.
@@ -84,13 +84,18 @@ This section includes explanations for the fields of the semantic format. Exampl
     Note: in case of two eyes' inputs for example in VR or glasses-based AR that would require pairs of images - one for each eye - this could be achieved using the existing support for multiple points of view (they would just be associated with the same player - left eye and right eye).
 
     In the future new types of images can be added, for example: semanticLevelOfDetail etc.
-* `collisionDetection` : what the player would collide with if they would have moved in a specific direction. Could enable for example to assist players with low vision with indication of what's in front of them or with footsteps sounds that fit the type of surface that the player walks on.
-  * `directionName` : one of predefined direction names ('forward', 'backward', 'up' and 'down').
-  * `semanticSpatialEntityId` : the id of the entity the player would collide with.
-  * `name` : the name of the entity the player would collide with.
-  * `distance` : the distance until collision.
-  * `directionRotation` : an alternative to directionName to provide parameters of an arbitrary direction.
-    * `pitch`, `yaw`, `roll` : rotation parameters of the entity.
+* `pointsOfCollisionPrediction` : points in space from which collision prediction data is generated.
+  * `semanticSpatialEntityId` : the pointOfCollisionPrediction itself is a semanticSpatialEntity with location, rotation etc.
+  * `source` : semanticSpatialEntityId of the entity which is the source of this pointOfCollisionPrediction (for example the player, a hand, a finger, a controller etc.).
+  * `collisionPrediction` : what the semanticSpatialEntityId would collide with if it would have moved in a specific direction, for example what the player would collide with if they would have moved in a specific direction or if their hand would move in a specific direction. Could enable for example to assist players with low vision with indication of what's in front of them or with footsteps sounds that fit the type of surface that the player walks on.
+    * `directionName` : one of predefined direction names ('forward', 'backward', 'left', 'right', 'up' and 'down').
+    * `semanticSpatialEntityId` : the id of the entity that the player\ hand\ finger\ controller etc. would collide with. For example, a finger-based point of collision prediction would enable identifying what the finger points at and if it's a text then read it. As another example, a hand-based point of collision prediction would enable identifying what the hand waves at and read aloud the name or instructions of the pointed entity etc.
+    * `name` : the name of the entity that the player\ hand\ finger\ controller etc. would collide with.
+    * `distance` : the distance until collision.
+    * `collisionPredictionMethod` : the method by which collision prediction is computed (for example, a line trace, a box trace, a sphere trace, tracing using the shape of the `source` entity etc.)
+    * `collisionPredictionHitPoint` : semanticSpatialEntityId of the extrapolated hit point of this pointOfCollisionPrediction with the 3D space in the specific direction.
+    * `directionRotation` : an alternative to directionName to provide parameters of an arbitrary direction.
+      * `pitch`, `yaw`, `roll` : rotation parameters of the entity.
 
 * `audio` : audio related semantic entities which could enable customized closed captions for example (3rd party developer can enable different fonts, background and foreground colors, names of speakers, speech direction indication etc.).
   * `voices`

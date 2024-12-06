@@ -143,39 +143,38 @@
 				]
 			}
 		],
-		"collisionDetection": [
+		"pointsOfCollisionPrediction": [
 			{
-				"directionName": "forward",
 				"semanticSpatialEntityId": null,
-				"name": null,
-				"distance": null,
-				"directionRotation": {
-					"pitch": null,
-					"yaw": null,
-					"roll": null
-				}
-			},
-			{
-				"directionName": "down",
-				"semanticSpatialEntityId": null,
-				"name":null,
-				"distance": null,
-				"directionRotation": {
-					"pitch": null,
-					"yaw": null,
-					"roll": null
-				}
-			},
-			{
-				"directionName": "north",
-				"semanticSpatialEntityId": null,
-				"name":null,
-				"distance": null,
-				"directionRotation": {
-					"pitch": null,
-					"yaw": null,
-					"roll": null
-				}
+				"source": null,
+				"collisionsPrediction": [
+					{
+						"directionName": "forward",
+						"semanticSpatialEntityId": null,
+						"name": null,
+						"distance": null,
+						"collisionPredictionMethod": null,
+						"collisionPredictionHitPoint": null,
+						"directionRotation": {
+							"pitch": null,
+							"yaw": null,
+							"roll": null
+						}
+					},
+					{
+						"directionName": "down",
+						"semanticSpatialEntityId": null,
+						"name": null,
+						"distance": null,
+						"collisionPredictionMethod": null,
+						"collisionPredictionHitPoint": null,
+						"directionRotation": {
+							"pitch": null,
+							"yaw": null,
+							"roll": null
+						}
+					}
+				]
 			}
 		],
 		"audio": {
