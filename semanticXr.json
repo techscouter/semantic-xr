@@ -181,13 +181,9 @@
 		"audio": {
 			"voices": [
 				{
+					"semanticSpatialEntityId": null,
 					"source": null,
 					"target": null,
-					"directionRotation": {
-						"pitch": null,
-						"yaw": null,
-						"roll": null
-					},
 					"text": {
 						"text": [
 							{

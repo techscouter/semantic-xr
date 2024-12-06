@@ -94,10 +94,9 @@ This section includes explanations for the fields of the semantic format. Exampl
 
 * `audio` : audio related semantic entities which could enable customized closed captions for example (3rd party developer can enable different fonts, background and foreground colors, names of speakers, speech direction indication etc.).
   * `voices`
-    * `source` : the source of the voice, for example, human1.
+    * `semanticSpatialEntityId` : id of the voice (enabling knowing its location, direction and other attributes).
+	* `source` : the source of the voice, for example, human1.
 	* `target` : the target of the voice, for example, human2.
-	* `directionRotation` : alternative to target, to specify arbitrary voice direction even if no target exists.
-	  * `pitch`, `yaw`, `roll` : rotation parameters of the voice.
     * `text` : container for the actual `text` and its `language` name.
       * `originalLanguage` : if there are text elements from multiple languages this specifies the original language of the voice.
     * `emotion` : the emotion of the speaker.
@@ -107,7 +106,7 @@ This section includes explanations for the fields of the semantic format. Exampl
       * `estimatedEndTime` : an estimate for when this voice would end speaking.
     * `audio`: the audio of the voice.
   * `effects` : sound effects.
-	* `semanticSpatialEntityId` : id of the effect (enabling knowing its location and other attributes)
+	* `semanticSpatialEntityId` : id of the effect (enabling knowing its location and other attributes).
   * `music` : music which can be heard in part of the 3D world.
 	* `semanticSpatialEntityId` : id from which location and form can be found for example
 	* `source` : id of the source of the music.
