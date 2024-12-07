@@ -12,9 +12,9 @@ This section includes explanations for the fields of the semantic format. Exampl
   * `realityInstanceId` : id for a specific instance of the reality mentioned above. For example a specific game played at a specific time and place or a specific screening of a movie.
   * `realityInstanceTimestamp` : a timestamp within the specific reality instance mentioned above. If the game or movie is paused for example, then this timestamp is paused as well.
   
-* `units`
-  * `time` : which units of time are used in the file, for example for realityInstanceTimestamp
-  * `space` : which units of distance are used in the file, for example for collisionDetection.distance.
+* `units` : the units used in the file (note that the values in this file should be decimal and not float in order to represent exact values and enable many orders of magnitude of difference between values in the file while keeping accuracy).
+  * `time` : which units of time are used in the file, for example for realityInstanceTimestamp.
+  * `space` : which units of distance are used in the file, for example for pointsOfCollisionPrediction.collisionsPrediction.distance.
   * `language` : which natural language is being used in the file, for example for descriptions and instructions.
 
 * `descriptions` : short descriptions of different aspects of the reality's 3D scene
