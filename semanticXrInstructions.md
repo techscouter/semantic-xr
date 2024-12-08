@@ -128,7 +128,7 @@ This section includes explanations for the fields of the semantic format. Exampl
 	  * `children` : lower level entities (for example, continents)
         * Here goes even lower level entities...
   * `crossSemanticXrEquality`
-    * For details see: [Examples of crossSemanticXrEquality](Examples/semanticXrExamples.md)
+    * For details see: [Examples of crossSemanticXrEquality](Examples/semanticXrExamples.md). If a field is missing in an entry it means it equals all possible values for this field - all realityTypes or all realityInstanceIds or all realityInstanceTimestamps or all semanticSpatialEntityIds (or their combination in case more than one field is missing).
       * `[` : beginning of an array of equal entities
         * `[`
           * `{`

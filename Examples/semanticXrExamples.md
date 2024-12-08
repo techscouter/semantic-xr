@@ -191,7 +191,7 @@ Same portrait NFT image that serves as an avatar in a certain virtual world whil
         ]
 
 ### Exercise for the reader (1)
-Representing different physics theories of the world using Semantic-XR.
+Representing different physics and philosophical theories of the world using Semantic-XR.
 
 ### Exercise for the reader (2)
 See message of commit `cd4e2e34f2a061f0436678211cb4375ca4276d96` in this repository for more examples.
