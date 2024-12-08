@@ -5,7 +5,7 @@ This section includes explanations for the fields of the semantic format. Exampl
 
 * `semanticXr`: a description of an XR experience as meaningful and well-defined data in order to make it more accessible. The root element of the file.
 
-* `schemaVersion` : a specific version of the semantic format template JSON that the document follows. If you clone this repository and make changes, please add a prefix namespace unique to you to avoid version confusion.
+* `schemaVersion` : a specific version of the semantic format template JSON that the document follows: what fields are included and which are mandatory and which are optional. schemaVersion is not strictly a semantic versioning string but it could be a string that can describe combinations of mandatory\ optional sets of fields (for example: BasicWithoutImages_0.0.1 or GlobalPositionsOnly_0.1.0 etc.). It could also be used in the future for short codes to represent agreed upon conformance levels (in a similar manner to W3C WCAG’s A, AA and AAA conformance levels for web content - a W3C XCAG standard might be defined :smiley: ). schemaVersion would probably include a namespace component to avoid naming collisions - this might be based on using a domain-like string structure. A Semantic-XR generator can publish its supported schemaVersions to align expectations with its clients.
 
 * `id` : a section that identifies the point in time in a specific reality that this Semantic-XR data represents. Note that realityInstanceId and realityInstanceTimestamp are optional which opens up a lot of opportunities to represent composite realities.
   * `realityId` : a type of reality, like a name of a video game or a name of a movie.
