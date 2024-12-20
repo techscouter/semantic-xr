@@ -20,7 +20,7 @@ This section includes explanations for the fields of the semantic format. Exampl
 * `descriptions` : short descriptions of different aspects of the reality's 3D scene
   * `reality` : description of the reality type (game, movie etc.)
   * `scene` : description of the scene in general at id.realityInstanceTimestamp point in time.
-  * `frame` : description of the very specific frame that is shown at id.realityInstanceTimestamp point in time.
+  * `frame` : description of the very specific frame that is shown at id.realityInstanceTimestamp point in time. The frame description could be created algorithmically using rules to generate the frame description based on other Semantic-XR fields (like forming a sentence based on horizontal positions and/or distances of the different visible entities). Alternatively the frame description could also be created using AI based on the image and other fields like semanticLevelOfDetail.
   
 * `Instructions`
   * `reality` : for example, a summary of how to play the game.
