@@ -4,7 +4,7 @@ The tags below describe a tags-based approach for implementing a Semantic-XR gen
 ## Functions for SemanticXr class object
     generateSemanticXr(schemaVersion: String) -> JSON
     
-## Tags for SemanticXr class object
+## Tags for SemanticXr class instance object
     sxr.schemaVersion=
     sxr.reality.id=
     sxr.reality.instanceId=
@@ -27,6 +27,7 @@ The tags below describe a tags-based approach for implementing a Semantic-XR gen
     sxr.name=
     sxr.description=
     sxr.instructions=
+    sxr.semanticLevelOfDetail=
     sxr.categoriesAndAttributes=[{"category":,"attributes":{}},...]
     sxr.actions=[{"animationState":,"actionName":},...]
     sxr.pointOfView=[{"lens":{}},...]

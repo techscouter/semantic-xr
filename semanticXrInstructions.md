@@ -37,22 +37,23 @@ This section includes explanations for the fields of the semantic format. Exampl
 
 * `semanticSpatialEntities` : the main list of semantic spatial entities with their properties.
   * `semanticSpatialEntityId` : an id that uniquely identifies this entity in this reality.
-    * `name` : natural language name of this entity.
-    * `description` : short natural language description of this entity.
-    * `instructions` : instructions for this entity (for example, for operating it or interacting with it).
-    * `physical` : physical properties of this entity.
-      * `location` : location of the entity. All entities' locations should be in the same coordinate system.
-        * `x`, `y`, `z` : location of the entity across the different axis. <TBD>
-      * `rotation` : rotation of the entity.
-        * `pitch`, `yaw`, `roll` : rotation parameters of the entity.
-    * `colors` : one or more colors ordered by dominance in the entity.
-    * `materials` : natural language descriptions of the materials the entity is made of, one or more materials ordered by dominance in the entity.
-    * `volume` : exact or approximate (for example, bounding box) volume
-    * `form` : exact or approximate (for example, bounding box) form
-    * `actions` : natural language descriptions of the actions of the entity (like: running or talking), one or more in order of importance.
-    * `categoriesAndAttributes` : array of categories and their attributes which describe the entity.
-      * `category`: non comprehensive list of examples for categories of entities: landscape, landscapeArchitecture, architecture, internalDesign, prop, livingEntity, player, light, camera, controller, pointOfView, hitPoint, effect, music, text, table, chair, semanticXr etc. Note that the option to have semanticXr as a nested semanticSpatialEntity is extremely powerful (for usage examples see the Examples folder)
-      * `attributes`: attributes and their values within the specific category. For example: for category 'text' the attributes could include the actual text in different languages. The value of the attributes field could include nested fields/arrays itself.
+  * `name` : natural language name of this entity.
+  * `description` : short natural language description of this entity.
+  * `instructions` : instructions for this entity (for example, for operating it or interacting with it).
+  * `physical` : physical properties of this entity.
+    * `location` : location of the entity. All entities' locations should be in the same coordinate system.
+      * `x`, `y`, `z` : location of the entity across the different axis. <TBD>
+    * `rotation` : rotation of the entity.
+      * `pitch`, `yaw`, `roll` : rotation parameters of the entity.
+  * `colors` : one or more colors ordered by dominance in the entity.
+  * `materials` : natural language descriptions of the materials the entity is made of, one or more materials ordered by dominance in the entity.
+  * `volume` : exact or approximate (for example, bounding box) volume
+  * `form` : exact or approximate (for example, bounding box) form
+  * `actions` : natural language descriptions of the actions of the entity (like: running or talking), one or more in order of importance.
+  * `semanticLevelOfDetail` : This very powerful field would enable the creator to define a default semantic level of detail hierarchy for a scan of the entities and define levels of details for zooming in and out semantically on the scene and going over the entities from a specific level of detail in a specific semantic order. It could greatly help in making scenes with a very large number of entities accessible. This field value on the entity, when applied to multiple entities, would enable the creation of the relations.semanticLevelOfDetail field’s graph (that appears down below under relations field). relations.semanticLevelOfDetail field's graph could provide for the user a powerful capability of an accessibility experience similar to a screen reader: like moving forward and backwards in HTML headings of a the same level and also moving up and down in levels of a specific entity. In addition to scanning 3D scenes horizontally or vertically or from closest to most distant element etc. from certain viewpoints, this opens up a way to scan the scene semantically in the way the creator or annotator of the scene defined. It could be implemented for example by values (tags) in a dot notation format of Level1Keyword_Order.Level2Keyword_Order.Level3Keyword_Order. The dots separate between levels of details and the order part recommends an inner order for a specific level of detail. As an example, a list of tags in a specific scene could be: house_1, house_1.door_1, house_1.window_2, house_1.window_3, house_1.kitchen_4, house_1.kitchen_4.oven_1, house_1.kitchen_4.refrigerator_2, house_1.window_5. In case of no immediate parent an empty string could also be added, for example: house_1, .car_1, .car_2, ..rocks_1 Virtual entities could be created as well, for example : pileOfRocks_1, groupOfPeople_1 etc.
+  * `categoriesAndAttributes` : array of categories and their attributes which describe the entity.
+    * `category`: non comprehensive list of examples for categories of entities: star, planet, landscape, landscapeArchitecture, architecture, internalDesign, prop, livingEntity, player, light, camera, controller, pointOfView, hitPoint, effect, music, text, table, chair, semanticXr etc. Note that the option to have semanticXr as a nested semanticSpatialEntity is extremely powerful (for usage examples see the Examples folder)
+    * `attributes`: attributes and their values within the specific category. For example: for category 'text' the attributes could include the actual text in different languages. The value of the attributes field could include nested fields/arrays itself.
 
 * `pointsOfView` : points in space from which view-based data is generated.
   * `semanticSpatialEntityId` : the pointOfView itself is a semanticSpatialEntity with location, rotation etc.
@@ -123,7 +124,7 @@ This section includes explanations for the fields of the semantic format. Exampl
 	* `lyrics`
 	* `description`
 * `relations` : relations between entities, realities etc.
-  * `semanticLevelOfDetail` : semantic hierarchy of entities - from high level to low level.
+  * `semanticLevelOfDetail` : semantic hierarchy of entities - from high level to low level. For detailed instructions and what this field enables see semanticSpatialEntities.semanticLevelOfDetail field instructions above.
 	  * `semanticSpatialEntityId` : highest level entity (for example, earth)
 	  * `children` : lower level entities (for example, continents)
         * Here goes even lower level entities...
