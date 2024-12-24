@@ -20,7 +20,7 @@ This section includes explanations for the fields of the semantic format. Exampl
 * `descriptions` : short descriptions of different aspects of the reality's 3D scene
   * `reality` : description of the reality type (game, movie etc.)
   * `scene` : description of the scene in general at id.realityInstanceTimestamp point in time.
-  * `frame` : description of the very specific frame that is shown at id.realityInstanceTimestamp point in time. The frame description could be created algorithmically using rules to generate the frame description based on other Semantic-XR fields (like forming a sentence based on horizontal positions and/or distances of the different visible entities). Alternatively the frame description could also be created using AI based on the image and other fields like semanticLevelOfDetail.
+  * `frame` : description of the very specific frame that is shown at id.realityInstanceTimestamp point in time. The frame description could be created algorithmically using rules to generate the frame description based on other Semantic-XR fields (like forming a sentence based on horizontal positions and\ or distances of the different visible entities). Alternatively the frame description could also be created using AI based on the image and other fields like semanticLevelOfDetail.
   
 * `Instructions`
   * `reality` : for example, a summary of how to play the game.
@@ -73,7 +73,7 @@ This section includes explanations for the fields of the semantic format. Exampl
     * value of type "semanticSegmentation" : semantic segmentation - ordered categories are taken from the category properties of the instance (see "instanceSegmentation").
     * value of type "preProcessedImage" : RGB image before applying any effects like blur etc. which could be problematic from an accessibility perspective.
     * value of type "realityTypeImage" : marking each area of the frame with the type of reality it represenets - real world, VR, passthrough etc.
-    * value of type "semanticLevelOfDetail" : different semanticLevelOfDetail values. This could be used for example to enable highlighting and\or masking important parts of the image using flexible importance thresholds.
+    * value of type "semanticLevelOfDetail" : different semanticLevelOfDetail values. This could be used for example to enable highlighting and\ or masking important parts of the image using flexible importance thresholds.
     * value of type "edges" : identifying the edges of the entities.
     * value of type "normals" : identifying the "normal" values for the frame.
   
