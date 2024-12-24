@@ -130,6 +130,12 @@
 						"lens": null
 					},
 					{
+						"type": "semanticLevelOfDetail",
+						"value": null,
+						"legend": null,
+						"lens": null
+					},
+					{
 						"type": "edges",
 						"value": null,
 						"legend": null,

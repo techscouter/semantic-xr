@@ -73,6 +73,7 @@ This section includes explanations for the fields of the semantic format. Exampl
     * value of type "semanticSegmentation" : semantic segmentation - ordered categories are taken from the category properties of the instance (see "instanceSegmentation").
     * value of type "preProcessedImage" : RGB image before applying any effects like blur etc. which could be problematic from an accessibility perspective.
     * value of type "realityTypeImage" : marking each area of the frame with the type of reality it represenets - real world, VR, passthrough etc.
+    * value of type "semanticLevelOfDetail" : different semanticLevelOfDetail values. This could be used for example to enable highlighting and\or masking important parts of the image using flexible importance thresholds.
     * value of type "edges" : identifying the edges of the entities.
     * value of type "normals" : identifying the "normal" values for the frame.
   
