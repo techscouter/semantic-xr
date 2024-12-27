@@ -2,11 +2,12 @@
 The tags below describe a tags-based approach for implementing a Semantic-XR generator. Once this input is provided, a game-engine library could potentially generate Semantic-XR instances using these tags in real time.
   
 ## Functions for SemanticXr class object
-    generateSemanticXr():JSON
+    generateSemanticXr(schemaVersion: String) -> JSON
     
-## Tags for SemanticXr class object
+## Tags for SemanticXr class instance object
     sxr.schemaVersion=
     sxr.reality.id=
+    sxr.reality.instanceId=
     sxr.reality.description=
     sxr.reality.instructions=
     sxr.units.time=
@@ -21,15 +22,16 @@ The tags below describe a tags-based approach for implementing a Semantic-XR gen
     sxr.crossSemanticXrEquality=[[{"realityType":,"realityInstanceId":,"realityInstanceTimestamp":,"semanticSpatialEntityId":},...]...]
     sxr.relations=
     
-## Tags for Semantic Entities
+## Tags for Semantic Spatial Entities
     sxr
     sxr.name=
     sxr.description=
     sxr.instructions=
+    sxr.semanticLevelOfDetail=
     sxr.categoriesAndAttributes=[{"category":,"attributes":{}},...]
     sxr.actions=[{"animationState":,"actionName":},...]
-    sxr.pointOfView=[{"lensParameters":{}},...]
-    sxr.collisionDetection=[{"directionName":, "directionRotation":}]
+    sxr.pointOfView=[{"lens":{}},...]
+    sxr.pointOfCollisionPrediction=[{"directionName":, "directionRotation":, "collisionPredictionMethod":},...]
 
 ## Tags for Scenes' Bounding Boxes (innermost volume overrides the outer ones)
     sxr.scene

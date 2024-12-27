@@ -34,6 +34,7 @@
 				"semanticSpatialEntityId": null,
 				"name": null,
 				"description": null,
+				"instructions": null,
 				"physical": {
 					"location": {
 						"x": null,
@@ -51,6 +52,7 @@
 					"form": null
 				},
 				"actions": [],
+				"semanticLevelOfDetail": null,
 				"categoriesAndAttributes": [
 					{
 						"category":null,
@@ -93,76 +95,101 @@
 				"images": [
 					{
 						"type": "image",
-						"value": null
+						"value": null,
+						"legend": null,
+						"lens": null
 					},
 					{
 						"type": "depthMap",
-						"value": null
+						"value": null,
+						"legend": null,
+						"lens": null
 					},
 					{
-						"type": "instanceSegmentationWithSemanticSpatialEntityId",
-						"value": null
+						"type": "instanceSegmentation",
+						"value": null,
+						"legend": null,
+						"lens": null
 					},
 					{
-						"type": "semanticSegmentationWithSemanticSpatialEntityCategory",
-						"value": null
+						"type": "semanticSegmentation",
+						"value": null,
+						"legend": null,
+						"lens": null
 					},
 					{
 						"type": "preProcessedImage",
-						"value": null
+						"value": null,
+						"legend": null,
+						"lens": null
 					},
 					{
 						"type": "realityTypeImage",
-						"value": null
+						"value": null,
+						"legend": null,
+						"lens": null
+					},
+					{
+						"type": "semanticLevelOfDetail",
+						"value": null,
+						"legend": null,
+						"lens": null
+					},
+					{
+						"type": "edges",
+						"value": null,
+						"legend": null,
+						"lens": null
+					},
+					{
+						"type": "normals",
+						"value": null,
+						"legend": null,
+						"lens": null
 					}
 				]
 			}
 		],
-		"collisionDetection": [
+		"pointsOfCollisionPrediction": [
 			{
-				"directionName": "forward",
 				"semanticSpatialEntityId": null,
-				"name": null,
-				"distance": null,
-				"directionRotation": {
-					"pitch": null,
-					"yaw": null,
-					"roll": null
-				}
-			},
-			{
-				"directionName": "down",
-				"semanticSpatialEntityId": null,
-				"name":null,
-				"distance": null,
-				"directionRotation": {
-					"pitch": null,
-					"yaw": null,
-					"roll": null
-				}
-			},
-			{
-				"directionName": "north",
-				"semanticSpatialEntityId": null,
-				"name":null,
-				"distance": null,
-				"directionRotation": {
-					"pitch": null,
-					"yaw": null,
-					"roll": null
-				}
+				"source": null,
+				"collisionsPrediction": [
+					{
+						"directionName": "forward",
+						"semanticSpatialEntityId": null,
+						"name": null,
+						"distance": null,
+						"collisionPredictionMethod": null,
+						"collisionPredictionHitPoint": null,
+						"directionRotation": {
+							"pitch": null,
+							"yaw": null,
+							"roll": null
+						}
+					},
+					{
+						"directionName": "down",
+						"semanticSpatialEntityId": null,
+						"name": null,
+						"distance": null,
+						"collisionPredictionMethod": null,
+						"collisionPredictionHitPoint": null,
+						"directionRotation": {
+							"pitch": null,
+							"yaw": null,
+							"roll": null
+						}
+					}
+				]
 			}
 		],
 		"audio": {
 			"voices": [
 				{
+					"semanticSpatialEntityId": null,
 					"source": null,
 					"target": null,
-					"directionRotation": {
-						"pitch": null,
-						"yaw": null,
-						"roll": null
-					},
 					"text": {
 						"text": [
 							{
