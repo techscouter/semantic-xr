@@ -85,7 +85,7 @@ This section includes explanations for the fields of the semantic format. Exampl
 
     Note: in case of two eyes' inputs for example in VR or glasses-based AR that would require pairs of images - one for each eye - this could be achieved using the existing support for multiple points of view (they would just be associated with the same player - left eye and right eye).
 
-    In the future new types of images can be added, for example: semanticLevelOfDetail etc.
+    In the future new types of images could be added.
 * `pointsOfCollisionPrediction` : points in space from which collision prediction data is generated.
   * `semanticSpatialEntityId` : the pointOfCollisionPrediction itself is a semanticSpatialEntity with location, rotation etc.
   * `source` : semanticSpatialEntityId of the entity which is the source of this pointOfCollisionPrediction (for example the player, a hand, a finger, a controller etc.).
