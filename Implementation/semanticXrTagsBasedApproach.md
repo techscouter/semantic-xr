@@ -31,7 +31,7 @@ The tags below describe a tags-based approach for implementing a Semantic-XR gen
     sxr.categoriesAndAttributes=[{"category":,"attributes":{}},...]
     sxr.actions=[{"animationState":,"actionName":},...]
     sxr.pointOfView=[{"lens":{}},...]
-    sxr.collisionDetection=[{"directionName":, "directionRotation":, "collisionPredictionMethod":},...]
+    sxr.pointOfCollisionPrediction=[{"directionName":, "directionRotation":, "collisionPredictionMethod":},...]
 
 ## Tags for Scenes' Bounding Boxes (innermost volume overrides the outer ones)
     sxr.scene
