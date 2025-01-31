@@ -12,7 +12,7 @@
 * [Audio-based AR (video).](https://youtu.be/Lsri6037iIE) This example uses AI (object recognition cloud service) in contrast to other examples which use a game engine library to generate the Semantic-XR content.
 
 ## Composite Semantic-XR
-* For example a computer screen or a cinema screen inside VR or photographs or TV shows in passthrough mode which are Semantic-XR entities by themselves (advanced usage of this could be used for reflections and/or views behind transparent surfaces).
+* For example a computer screen or a cinema screen inside a VR experience or photographs or TV shows in passthrough mode which are Semantic-XR entities by themselves (advanced usage of this could be used for reflections and\ or views behind transparent surfaces).
 
 ## crossSemanticXrEquality examples
 This single field opens up a lot of opportunities, such as conveying equality of entities in space and time. For example:
@@ -24,72 +24,72 @@ In this case, there is the event and the live TV broadcast shown on two specific
         [
             [
                 {
-                    "realityType" : "Opening Ceremony",
+                    "realityId" : "University XYZ Graduation Ceremony",
                     "realityInstanceId : "2045",
                 },
                 {
-                    "realityType": "TV Broadcast",
-                    "realityInstanceId": "Opening Ceremony @ 2045 | TV Set 1"
+                    "realityId": "TV Broadcast",
+                    "realityInstanceId": "University XYZ Graduation Ceremony @ 2045 | TV Set 1"
                 },
                 {
-                    "realityType": "TV Broadcast",
-                    "realityInstanceId": "Opening Ceremony @ 2045 | TV Set 2"
+                    "realityId": "TV Broadcast",
+                    "realityInstanceId": "University XYZ Graduation Ceremony @ 2045 | TV Set 2"
                 }
             ]
         ]
 
 ### Slow Motion Video
-In this case, we have a game that is played, a movie of the game at regular speed and a slow motion version at half the speed playing somewhere else. Note the different values for realityInstanceTimestamp for the slow motion movie clip and the absence of semanticSpatialEntityId in all elements (as they are equal for all)
+In this case, we have a game that is played, a movie of the game at regular speed and a slow motion version at half the speed playing somewhere else. Note the different values for realityInstanceTimestamp for the slow motion movie clip and the absence of semanticSpatialEntityId in all elements (as they are equal for all).
 
         "crossSemanticXrEquality":
         [
             [
                 {
-                    "realityType": "DemoGameCubes",
+                    "realityId": "DemoGameCubes",
                     "realityInstanceId": "WorldChampionshipApril2022",
                     "realityInstanceTimestamp": 0
                 },
                 {
-                    "realityType": "MovieClip",
+                    "realityId": "MovieClip",
                     "realityInstanceId": "DemoGameCubes|WorldChampionshipApril2022|9kuh76ygtfr543ed",
                     "realityInstanceTimestamp": 0
                 },
                 {
-                    "realityType": "MovieClip",
+                    "realityId": "MovieClip",
                     "realityInstanceId": "DemoGameCubes|WorldChampionshipApril2022|SlowMotion|0poli6tgfredvb5t",
                     "realityInstanceTimestamp": 0
                 }
             ],
             [
                 {
-                    "realityType": "DemoGameCubes",
+                    "realityId": "DemoGameCubes",
                     "realityInstanceId": "WorldChampionshipApril2022",
                     "realityInstanceTimestamp": 1
                 },
                 {
-                    "realityType": "MovieClip",
+                    "realityId": "MovieClip",
                     "realityInstanceId": "DemoGameCubes|WorldChampionshipApril2022|9kuh76ygtfr543ed",
                     "realityInstanceTimestamp": 1
                 },
                 {
-                    "realityType": "MovieClip",
+                    "realityId": "MovieClip",
                     "realityInstanceId": "DemoGameCubes|WorldChampionshipApril2022|SlowMotion|0poli6tgfredvb5t",
                     "realityInstanceTimestamp": 2
                 }
             ],
             [
                 {
-                    "realityType": "DemoGameCubes",
+                    "realityId": "DemoGameCubes",
                     "realityInstanceId": "WorldChampionshipApril2022",
                     "realityInstanceTimestamp": 2
                 },
                 {
-                    "realityType": "MovieClip",
+                    "realityId": "MovieClip",
                     "realityInstanceId": "DemoGameCubes|WorldChampionshipApril2022|9kuh76ygtfr543ed",
                     "realityInstanceTimestamp": 2
                 },
                 {
-                    "realityType": "MovieClip",
+                    "realityId": "MovieClip",
                     "realityInstanceId": "DemoGameCubes|WorldChampionshipApril2022|SlowMotion|0poli6tgfredvb5t",
                     "realityInstanceTimestamp": 4
                 }
@@ -102,15 +102,15 @@ Different players share the same game entities at more or less the same time. No
         "crossSemanticXrEquality":
         [
             {
-                "realityType": "DemoGameCubesMultiplayer",
+                "realityId": "DemoGameCubesMultiplayer",
                 "realityInstanceId": "DemoGameCubesMultiplayer|6hdkil9uejdoek3o|Server"
             },
             {
-                "realityType": "DemoGameCubesMultiplayer",
+                "realityId": "DemoGameCubesMultiplayer",
                 "realityInstanceId": "DemoGameCubesMultiplayer|6hdkil9uejdoek3o|Player1"
             },
             {
-                "realityType": "DemoGameCubesMultiplayer",
+                "realityId": "DemoGameCubesMultiplayer",
                 "realityInstanceId": "DemoGameCubesMultiplayer|6hdkil9uejdoek3o|Player2"
             },
         ]
@@ -121,13 +121,13 @@ Note the 2 seconds delay between the server and the game played by player 3.
         "crossSemanticXrEquality":
         [
             {
-                "realityType": "DemoGameCubesMultiplayer",
+                "realityId": "DemoGameCubesMultiplayer",
                 "realityInstanceId": "DemoGameCubesMultiplayer|6hdkil9uejdoek3o|Server",
                 "realityInstanceTimestamp": 20
 
             },
             {
-                "realityType": "DemoGameCubesMultiplayer",
+                "realityId": "DemoGameCubesMultiplayer",
                 "realityInstanceId": "DemoGameCubesMultiplayer|6hdkil9uejdoek3o|Player3",
                 "realityInstanceTimestamp": 22
             }
@@ -140,58 +140,98 @@ A character (Human1) that appears throughout a movie (TimeTravelMovie1) and appe
         [
             [
                 {
-                    "realityType": "Movie",
-                    "realityInstanceId": "TimeTravelMovie1"
-                    "realityInstanceTimestamp" : 1988-12-18
+                    "realityId": "Movie",
+                    "realityInstanceId": "TimeTravelMovie1",
+                    "realityInstanceTimestamp" : "1988-12-18",
                     "semanticSpatialEntityId" : "Human1"
                 },
                 {
-                    "realityType" : "RealityUnderlyingMovie",
-                    "realityInstanceId" : "TimeTravelMovie1"
-                    "realityInstanceTimestamp" : 1995-12-20
+                    "realityId" : "RealityUnderlyingMovie",
+                    "realityInstanceId" : "TimeTravelMovie1",
+                    "realityInstanceTimestamp" : "1995-12-20",
                     "semanticSpatialEntityId" : "Human1"
                 }
             ],
             [
                 {
-                    "realityType": "Movie",
+                    "realityId": "Movie",
                     "realityInstanceId": "TimeTravelMovie1"
-                    "realityInstanceTimestamp" : 1988-12-19
+                    "realityInstanceTimestamp" : "1988-12-19",
                     "semanticSpatialEntityId" : "Human1"
                 },
                 {
-                    "realityType" : "RealityUnderlyingMovie",
-                    "realityInstanceId" : "TimeTravelMovie1"
-                    "realityInstanceTimestamp" : 1975-12-20
+                    "realityId" : "RealityUnderlyingMovie",
+                    "realityInstanceId" : "TimeTravelMovie1",
+                    "realityInstanceTimestamp" : "1975-12-20",
                     "semanticSpatialEntityId" : "Human1"
                 }
             ]
         ]
         
-### Non-Fungible Tokens (NFTs)
-Same portrait NFT image that serves as an avatar in a certain virtual world while serving as a background image in a different virtual world.
+### Shared Entities and optional Non-Fungible Tokens (NFTs)
+An example of a portrait image that serves as an avatar in a certain virtual world while serving as a background image in a different virtual world.
 
         "crossSemanticXrEquality":
         [
             {
-                "realityType": "Virtual World",
-                "realityInstanceId": "Application1|9lkjurfbhgft56y7"
+                "realityId": "Virtual World 1",
+                "realityInstanceId": "Application1|9lkjurfbhgft56y7",
                 "semanticSpatialEntityId" : "Avatar|XYZ"
             },
             {
-                "realityType" : "Virtual World",
-                "realityInstanceId" : "Application2|9kjh64gtrfdesxcs"
+                "realityId" : "Virtual World 2",
+                "realityInstanceId" : "Application2|7kjh64gtrfdesxcs",
                 "semanticSpatialEntityId" : "BackgroundImage|ABC"
             },
             {
-                "realityType" : "NFT inventory",
+                "realityId" : "NFT inventory",
                 "realityInstanceId" : "Company1",
                 "semanticSpatialEntityId" : "NFT|123456"
             }
         ]
 
-### Exercise for the reader (1)
+### Portals
+Tracking a character that moved between two virtual worlds. In the example below "Character|12345" moved after one hour (3600 seconds) from one virtual world (one reality instance) to a second virtual world (second reality instance) where it got the id "Character|ABCDE". In the internal clock of the second reality instance the movement was 2 minutes (120) after its beginning. The moving character stayed in the second reality instance until it ended.
+
+        "crossSemanticXrEquality":
+        [
+            {
+                "realityId": "Virtual World 1",
+                "realityInstanceId": "Application1|9lkjurfbhgft56y7",
+                "realityInstanceTimestamp": "-3600",
+                "semanticSpatialEntityId" : "Character|12345"
+            },
+            {
+                "realityId" : "Virtual World 2",
+                "realityInstanceId" : "Application2|7kjh64gtrfdesxcs",
+                "realityInstanceTimestamp": "120-",
+                "semanticSpatialEntityId" : "Character|ABCDE"
+            }
+        ]
+
+`crossSemanticXrEquality` field can also be used to describe portals between multiple realities. For example the following field describes a portal that connect two reality instances:
+
+        "crossSemanticXrEquality":
+        [
+            {
+                "realityId": "Virtual World 1",
+                "realityInstanceId": "Application1|9lkjurfbhgft56y7",
+                "semanticSpatialEntityId" : "Portal|9876"
+            },
+            {
+                "realityId" : "Virtual World 2",
+                "realityInstanceId" : "Application2|7kjh64gtrfdesxcs",
+                "semanticSpatialEntityId" : "Portal|KJIH"
+            }
+        ]
+
+
+
+### Calibration
+An example of that would be calibrating between the real world and an Augmented Reality Experience by describing the identity of marker entities using crossSemanticXrEquality.
+
+### Exercise for the reader :smiley: (1)
 Representing different physics and philosophical theories of the world using Semantic-XR.
 
-### Exercise for the reader (2)
+### Exercise for the reader :smiley: (2)
 See message of commit `cd4e2e34f2a061f0436678211cb4375ca4276d96` in this repository for more examples.
