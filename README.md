@@ -104,11 +104,11 @@ This is still a **work in progress technology** and comes with several challenge
 * Potential **security** issues for consumers of semantic data from unverified sources. 
   * But...
     * Further research into using digital signatures and checksums might be useful to enable verification of the source and integrity of the Semantic-XR data. 
-* Potential **privacy** issues (for example if players' details are provided as part of the semantic data without consent and/or in violation of privacy regulations).
+* Potential **privacy** issues (for example if players' details are provided as part of the semantic data without consent and\ or in violation of privacy regulations).
   * But...
     * Transparency.
     * Opt-in consent.
-    * Partial sharing of data using a schemaVersion with a limited scope and/or using filters of private data.
+    * Partial sharing of data using a schemaVersion with a limited scope and\ or using filters of private data.
 * There are **accessibility categories that would be difficult to support** by relying only on the semantic format. For example: content related (such as puzzle hints) and deep modifications (such as avoiding shaky camera movements).
   * But...
     * Not all accessibility challenges can be addressed by Semantic-XR based solutions.

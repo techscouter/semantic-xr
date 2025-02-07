@@ -263,13 +263,13 @@
 			"crossSemanticXrEquality": [
 				[
 					{
-						"realityType": null,
+						"realityId": null,
 						"realityInstanceId": null,
 						"realityInstanceTimestamp": null,
 						"semanticSpatialEntityId": null
 					},
 					{
-						"realityType": null,
+						"realityId": null,
 						"realityInstanceId": null,
 						"realityInstanceTimestamp": null,
 						"semanticSpatialEntityId": null
@@ -277,25 +277,25 @@
 				],
 				[
 					{
-						"realityType": null,
+						"realityId": null,
 						"realityInstanceId": null,
 						"realityInstanceTimestamp": null,
 						"semanticSpatialEntityId": null
 					},
 					{
-						"realityType": null,
+						"realityId": null,
 						"realityInstanceId": null,
 						"realityInstanceTimestamp": null,
 						"semanticSpatialEntityId": null
 					},
 					{
-						"realityType": null,
+						"realityId": null,
 						"realityInstanceId": null,
 						"realityInstanceTimestamp": null,
 						"semanticSpatialEntityId": null
 					},
 					{
-						"realityType": null,
+						"realityId": null,
 						"realityInstanceId": null,
 						"realityInstanceTimestamp": null,
 						"semanticSpatialEntityId": null

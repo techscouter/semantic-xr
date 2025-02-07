@@ -19,8 +19,7 @@ The tags below describe a tags-based approach for implementing a Semantic-XR gen
     sxr.accessibility.instructions.motor=
     sxr.accessibility.instructions.speech=
     sxr.accessibility.instructions.cognitive=
-    sxr.crossSemanticXrEquality=[[{"realityType":,"realityInstanceId":,"realityInstanceTimestamp":,"semanticSpatialEntityId":},...]...]
-    sxr.relations=
+    sxr.relations.crossSemanticXrEquality=[[{"realityId":,"realityInstanceId":,"realityInstanceTimestamp":,"semanticSpatialEntityId":},...]...]
     
 ## Tags for Semantic Spatial Entities
     sxr
@@ -30,6 +29,7 @@ The tags below describe a tags-based approach for implementing a Semantic-XR gen
     sxr.semanticLevelOfDetail=
     sxr.categoriesAndAttributes=[{"category":,"attributes":{}},...]
     sxr.actions=[{"animationState":,"actionName":},...]
+    sxr.materials=
     sxr.pointOfView=[{"lens":{}},...]
     sxr.pointOfCollisionPrediction=[{"directionName":, "directionRotation":, "collisionPredictionMethod":},...]
 
