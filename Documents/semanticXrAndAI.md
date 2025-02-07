@@ -12,6 +12,12 @@ The steps to accomplish Semantic-XR for Real World and Generative AI based media
 * AI Inference phase of real world media’s Semantic-XR enabling its usage by a variety of Accessibility Solutions
 * Generation of Semantic-XR as coupled metadata of Generative AI based media. So generated media (photos, videos, animation films etc.) could be annotated with Semantic-XR metadata right from the start by the generative model that was trained using the synthetic data from the first step above. As generated media becomes more ubiquitous this solution could contribute to the accessibility of such AI-based generated media
 
+#### Notes on the above AI training phase
+* Building a very large tagged synthetic dataset as described above would also enable not using AI that was trained on copyrighted materials but having AI that was trained on content created specifically for this purpose.
+* This dataset would also enable training the AI on the content creators' tags and not on generic content found online with its many types of biases (this is assuming the dataset content creators are not biased of course...).
+* One could also add (with permission) to this AI training dataset also images and their descriptions from other training datasets that were specifically collected from people who are blind or have low vision in order to enrich the training data.
+
+
 ### Semantic-XR as Input to Generative AI
 Creation in the reverse order - instead of inference from 3D or 4D content (3D images or videos) then moving from the Semantic-XR into 3D or 4D content using AI. 3D or 4D content generation especially by people with disabilities can be done using writing a Semantic-XR document and providing it as input to an AI-based generation tool which would enable immediate accessibility of this content by its accompanying Semantic-XR and further editing and generation cycles. So a closed feedback loop would look like:
 * First generate Semantic-XR manually (like the old days of manual HTML editing) or via a dedicated editor or a script and then an AI based solution would use this Semantic-XR as an aid and guideline (using things like ControlNet etc.) and turn it into 3D or 4D content

@@ -5,8 +5,9 @@
 * [Video of a Real Time 3D game (video)](https://youtu.be/Q7JY3w7StHo)
 
 ## Movie
-* [Movie](https://youtu.be/gh0vJOWk5EY) : depthMap image used for highlighting objects in a video and an image.
-* Movie can be represented in Semantic-XR format by having no realityInstanceId and no realityInstanceTimestamp in the highest level semanticXr element. Child Semantic-XR entities do have timestamp and they represent frames in the movie. Virtual production methods using a game engine based Semantic-XR library could enable auto-generation of movie semantic descriptions. This could apply as well to animations. BTW, this opens up the possibility of "invisible movies" - movies that exist as text-only in a Semantic-XR format. Another possibility is annotating old movies with Semantic-XR metadata to make them more accessible.
+* Movies' accessibility can be highly improved by audio description tracks that for example can be built with all the huge amount of information included in the Semantic-XR. These audio description tracks (created in realtime or offline) can be made available as text to a screen reader to listen to in a fast or a slow manner as the user wishes with their preferred voice. Not only listening but also using all the other Accessibility Solutions that can be created for Semantic-XR like spatial audio scans of entities’ names etc. if the Semantic-XR is provided as metadata to the movie. An example for this is the video mentioned above describing [a video of a real time 3D game with a solution that is applicable to any video which includes Semantic-XR metadata](https://youtu.be/Q7JY3w7StHo)
+* [Movie that includes Semantic-XR metadata with depthMap images used for highlighting objects in a video and an image (video)](https://youtu.be/gh0vJOWk5EY)
+* A complete movie can be represented in Semantic-XR format by having no realityInstanceId and no realityInstanceTimestamp in the highest level semanticXr element. Child Semantic-XR entities do have timestamp and they represent frames in the movie. Virtual production methods using a game engine based Semantic-XR library could enable auto-generation of movie semantic descriptions. This could apply as well to animations. BTW, this opens up the possibility of "invisible movies" - movies that exist as text-only in a Semantic-XR format. Another possibility is annotating old movies with Semantic-XR metadata to make them more accessible.
 
 ## Real World
 * [Audio-based AR (video).](https://youtu.be/Lsri6037iIE) This example uses AI (object recognition cloud service) in contrast to other examples which use a game engine library to generate the Semantic-XR content.
@@ -234,4 +235,4 @@ An example of that would be calibrating between the real world and an Augmented 
 Representing different physics and philosophical theories of the world using Semantic-XR.
 
 ### Exercise for the reader :smiley: (2)
-See message of commit `cd4e2e34f2a061f0436678211cb4375ca4276d96` in this repository for more examples.
+See message of commit cd4e2e34f2a061f0436678211cb4375ca4276d96 in this repository for more examples.
