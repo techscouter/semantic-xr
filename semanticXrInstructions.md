@@ -1,5 +1,5 @@
 # Semantic-XR Instructions
-This section includes explanations for the fields of the semantic format. Examples for values for some of the fields can be found in the examples described in the [Semantic-XR examples document](/Examples/semanticXrExamples.md). The `schemaVersion` field value is used to determine which fields are mandatory and which are optional. Note that some of the definitions are a bit loose - this is both part of the early stage phase of this format and both for enabling creative uses for its users.
+This section includes explanations for the fields of the Semantic-XR format. Examples for values for some of the fields can be found in the examples described in the [Semantic-XR examples document](/Examples/semanticXrExamples.md). The `schemaVersion` field value is used to determine which fields are mandatory and which are optional. Note that some of the definitions are a bit loose - this is both part of the early stage phase of this format and both for enabling creative uses for its users.
 
 ## Semantic XR fields' explanations
 
@@ -14,11 +14,11 @@ This section includes explanations for the fields of the semantic format. Exampl
   
 * `units` : the units used in the document (note that field values should be decimal and not float in order to represent exact values and enable many orders of magnitude of difference between values in the same document while keeping accuracy).
   * `time` : which units of time are used in the document, for example for realityInstanceTimestamp.
-  * `space` : which units of distance are used in the document, for example for pointsOfCollisionPrediction.collisionsPrediction.distance.
+  * `space` : which units of distance are used in the document, for example for pointsOfCollisionPrediction.collisionsPredictions.distance.
   * `language` : which natural language is being used in the document, for example for descriptions and instructions.
 
 * `descriptions` : short descriptions of different aspects of the reality's 3D scene
-  * `reality` : description of the reality type (game, movie etc.)
+  * `reality` : description of the reality (game, movie etc.)
   * `scene` : description of the current 3D scene in general at id.realityInstanceTimestamp point in time.
   * `frame` : description of the very specific main frame that is shown in id.realityInstanceId at id.realityInstanceTimestamp point in time. The frame description could be created algorithmically using rules to generate the frame description based on other Semantic-XR fields (like forming a sentence based on horizontal positions and\ or distances of the different visible entities). Alternatively the frame description could also be created using AI based on the image and other fields like semanticLevelOfDetail.
   
@@ -36,7 +36,7 @@ This section includes explanations for the fields of the semantic format. Exampl
     * `cognitive`: for example how to access the instructions and descriptions for specific entities.
 
 * `semanticSpatialEntities` : the main list of semantic spatial entities with their properties.
-  * `semanticSpatialEntityId` : an id that uniquely identifies this entity in this reality.
+  * `semanticSpatialEntityId` : an id that uniquely identifies this entity in this reality instance.
   * `name` : natural language name of this entity.
   * `description` : short natural language description of this entity.
   * `instructions` : instructions for this entity (for example, for operating it or interacting with it).
@@ -46,13 +46,13 @@ This section includes explanations for the fields of the semantic format. Exampl
     * `rotation` : rotation of the entity.
       * `pitch`, `yaw`, `roll` : rotation parameters of the entity.
   * `colors` : one or more colors ordered by dominance in the entity.
-  * `materials` : natural language descriptions of the materials the entity is made of, one or more materials ordered by dominance in the entity.
-  * `volume` : exact or approximate (for example, bounding box) volume
-  * `form` : exact or approximate (for example, bounding box) form
+  * `materials` : natural language names of the materials the entity is made of, one or more materials ordered by dominance in the entity.
+  * `volume` : exact or approximate (for example, bounding box) volume.
+  * `form` : exact or approximate (for example, bounding box) form.
   * `actions` : natural language descriptions of the actions of the entity (like: running or talking), one or more in order of importance.
   * `semanticLevelOfDetail` : This very powerful field would enable the creator to define a default semantic level of detail hierarchy for a scan of the entities and define levels of details for zooming in and out semantically on the scene and going over the entities from a specific level of detail in a specific semantic order. It could greatly help in making scenes with a very large number of entities accessible. This field value on the entity, when applied to multiple entities, would enable the creation of the relations.semanticLevelOfDetail field’s graph (that appears down below under relations field). relations.semanticLevelOfDetail field's graph could provide for the user a powerful capability of an accessibility experience similar to a screen reader: like moving forward and backwards in HTML headings of a the same level and also moving up and down in levels of a specific entity. In addition to scanning 3D scenes horizontally or vertically or from closest to most distant element etc. from certain viewpoints, this opens up a way to scan the scene semantically in the way the creator or annotator of the scene defined. It could be implemented for example by values (tags) in a dot notation format of Level1Keyword_Order.Level2Keyword_Order.Level3Keyword_Order. The dots separate between levels of details and the order part recommends an inner order for a specific level of detail. As an example, a list of tags in a specific scene could be: house_1, house_1.door_1, house_1.window_2, house_1.window_3, house_1.kitchen_4, house_1.kitchen_4.oven_1, house_1.kitchen_4.refrigerator_2, house_1.window_5. In case of no immediate parent an empty string could also be added, for example: house_1, .car_1, .car_2, ..rocks_1. Virtual entities could be created as well, for example : pileOfRocks_1, groupOfPeople_1 etc.
   * `categoriesAndAttributes` : array of categories and their attributes which describe the entity.
-    * `category`: non comprehensive list of examples for categories of entities: star, planet, landscape, landscapeArchitecture, architecture, internalDesign, object, location, livingEntity, player, light, camera, controller, pointOfView, hitPoint, effect, music, text, table, chair, semanticXr etc. Note that the option to have semanticXr as a nested semanticSpatialEntity is extremely powerful (for usage examples see the [Semantic-XR examples document's composite Semantic-XR section](/Examples/semanticXrExamples.md#composite-semantic-xr)). It would be useful to define standard categories as part of a standard while still enabling custom ones.
+    * `category`: non comprehensive list of examples for categories of entities: star, planet, landscape, landscapeArchitecture, architecture, internalDesign, object, location, livingEntity, player, light, camera, controller, pointOfView, hitPoint, effect, music, text, table, chair, shadow, semanticXr etc. Note that the option to have semanticXr as a nested semanticSpatialEntity is extremely powerful (for usage examples see the [Semantic-XR examples document's composite Semantic-XR section](/Examples/semanticXrExamples.md#composite-semantic-xr)). It would be useful to define standard categories as part of a standard while still enabling custom ones.
     * `attributes`: attributes and their values within the specific category. For example: for category 'text' the attributes could include the actual text in different languages. The value of the attributes field could include nested fields\ arrays itself.
 
 * `pointsOfView` : points in space from which view-based data is generated.
@@ -66,13 +66,13 @@ This section includes explanations for the fields of the semantic format. Exampl
         * `verticalFraction` : fraction of height (0=top, 0.5=middle height, 1=bottom).
       * `distance` : distance from this point of view in space units.
   * `visualHitPoint` : semanticSpatialEntityId of the extrapolated hit point of this pointOfView with the 3D space in front of it. For example, a controller-based point of view's hit point id would enable using it as a laser pointer and have it read aloud text, name of pointed entity, distance to an entity etc.
-  * `images` : optional images generated from this point of view. As this is a JSON file there is a need to do BASE64 encoding of the data and **verify** the data source for security reasons. Data URLs might be useful here with their pros and cons. Note that images can be for example 360 degrees images or be in other kinds of shapes, types of data and formats. Example types of images:
+  * `images` : optional images generated from this point of view. As this is a JSON file there is a need to do BASE64 encoding of the data and **verify** the data source for security reasons. Data URLs might be useful here with their pros and cons for the image's `value` field. Note that images can be for example 360 degrees images or be in other kinds of shapes, types of data and formats. Example types of images:
     * value of type "image": regular RGB image of the frame.
     * value of type "depthMap" : depth map.
     * value of type "instanceSegmentation" : instance segmentation - each instance is identified by its semanticSpatialEntityId.
     * value of type "semanticSegmentation" : semantic segmentation - ordered categories are taken from the category properties of the instance (see "instanceSegmentation").
     * value of type "preProcessedImage" : RGB image before applying any effects like blur etc. which could be problematic from an accessibility perspective.
-    * value of type "realityTypeImage" : marking each area of the frame with the type of reality it represenets - real world, VR, passthrough etc.
+    * value of type "realityTypeImage" : marking each area of the frame with the type of reality it represenets - real world, VR, AR content, passthrough etc.
     * value of type "semanticLevelOfDetail" : different semanticLevelOfDetail values. This could be used for example to enable highlighting and\ or masking important parts of the image using flexible importance thresholds.
     * value of type "edges" : identifying the edges of the entities.
     * value of type "normals" : identifying the "normal" values for the frame.
@@ -81,7 +81,7 @@ This section includes explanations for the fields of the semantic format. Exampl
 
     image’s `lens` describes characteristics of the generator of the image content (for example camera settings used for an image). It would be useful in the future to define a common terminology of lens' fields that would be part of the Semantic-XR format.
 
-    The images' color depth should be sufficient to represent the expected number of colors needed (for example the number of semanticSpatialEntityIds in case of instanceSegmentation).
+    The images' color depth should be chosen to be sufficient to represent the expected number of colors needed (for example the number of semanticSpatialEntityIds in case of instanceSegmentation).
 
     Note: in case of two eyes' inputs for example in VR or glasses-based AR that would require pairs of images - one for each eye - this could be achieved using the existing support for multiple points of view (they would just be associated with the same player - left eye and right eye).
 
@@ -89,7 +89,7 @@ This section includes explanations for the fields of the semantic format. Exampl
 * `pointsOfCollisionPrediction` : points in space from which collision prediction data is generated.
   * `semanticSpatialEntityId` : the pointOfCollisionPrediction itself is a semanticSpatialEntity with location, rotation etc.
   * `source` : semanticSpatialEntityId of the entity which is the source of this pointOfCollisionPrediction (for example the player, a hand, a finger, a controller etc.).
-  * `collisionPrediction` : what the semanticSpatialEntityId would collide with if it would have moved in a specific direction, for example what the player would collide with if they would have moved in a specific direction or if their hand would move in a specific direction. Could enable for example to assist players with low vision with indication of what's in front of them or with footsteps sounds that fit the type of surface that the player walks on.
+  * `collisionsPredictions` : what the semanticSpatialEntityId would collide with if it would have moved in a specific direction, for example what the player would collide with if they would have moved in a specific direction or if their hand would move in a specific direction. Could enable for example to assist players with low vision with indication of what's in front of them or with footsteps sounds that fit the type of surface that the player walks on.
     * `directionName` : one of predefined direction names ('forward', 'backward', 'left', 'right', 'up' and 'down').
     * `semanticSpatialEntityId` : the id of the entity that the player\ hand\ finger\ controller etc. would collide with. For example, a finger-based point of collision prediction would enable identifying what the finger points at and if it's a text then read it. As another example, a hand-based point of collision prediction would enable identifying what the hand waves at and read aloud the name or instructions of the pointed entity etc.
     * `name` : the name of the entity that the player\ hand\ finger\ controller etc. would collide with.

@@ -1,9 +1,9 @@
 # Semantic-XR High Impact Experimental Ideas
 
-Below is a list of additional high impact experimental ideas. These ideas were not fully tested and validated yet but if materialized, they can have a major impact on XR Experiences and Accessibility Solutions.
+Below is a list of additional high impact experimental ideas. These ideas were not fully tested and validated yet but if materialized, they could have a huge impact on XR Experiences and Accessibility Solutions.
 
 ## XR Accessibility Conformance Levels
-For details check out the [section about a proposal of standardizing XR Accessibility Conformance Levels based on the Semantic-XR format](/Documents/semanticXrStandardization.md#standardization-xr-accessibility-conformance-levels).
+For details check out the [section about a proposal of standardizing XR Accessibility Conformance Levels based on the Semantic-XR format](/Documents/semanticXrStandardization.md).
 
 ## Semantic-XR and AI
 For details check out the [section on multiple ways to integrate between Semantic-XR and AI](/Documents/semanticXrAndAI.md) including a list of advantages of having Semantic-XR metadata over black-box only analysis of 3D scenes and in addition a roadmap for having Semantic-XR for the Real World and for Generative AI.
@@ -29,7 +29,7 @@ For details check out the [section on multiple ways to integrate between Semanti
         * One could also ask for a replay of a sequence of the latest images captured from the target portal’s pointOfView to get a video preview of the target world.
         * In addition to image or video previews one could also query the destination world. As an example, one could ask if a specific category of semanticSpatialEntity is visible from the pointOfView of the destination portal and if so, what is its distance from the portal.
 4. Tracking movements between virtual worlds:
-    In order to track these movements and other equal features of different worlds, the Semantic-XR field `semanticXr.relations.crossSemanticXrEquality` would be used. It enables tracking of equal parts of different virtual worlds or realities. A special case of this equality tracking is tracking of entities that are moving across virtual worlds. Check out the relevant section with details on crossSemanticXrEquality including multiple examples of its usage, [including an example of tracking entity movement between realities and an example of defining portals](/Examples/semanticXrExamples.md#portals). 
+    In order to track these movements and other equal features of different worlds, the Semantic-XR field `relations.crossSemanticXrEquality` would be used. It enables tracking of equal parts of different virtual worlds or realities. A special case of this equality tracking is tracking of entities that are moving across virtual worlds. Check out the relevant section with details on crossSemanticXrEquality including multiple examples of its usage, [including an example of tracking entity movement between realities and an example of defining portals](/Examples/semanticXrExamples.md#portals). 
 
 ## Semantic-XR Streams and Pipes
 Media with coupled Semantic-XR metadata (including video streams) can be augmented with additional pieces of information in addition to what is already there in the images and in the Semantic-XR metadata. This could be done by a computational chain of “pipes” (similar to Unix-like pipes) processing the media using the Semantic-XR metadata and optionally its images and augmenting them in different ways.

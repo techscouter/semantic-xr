@@ -154,7 +154,7 @@
 			{
 				"semanticSpatialEntityId": null,
 				"source": null,
-				"collisionsPrediction": [
+				"collisionsPredictions": [
 					{
 						"directionName": "forward",
 						"semanticSpatialEntityId": null,

@@ -1,5 +1,5 @@
 # Tags-based Approach for Implementing a Semantic-XR Generator
-The tags below describe a tags-based approach for implementing a Semantic-XR generator. Once this input is provided, a game-engine library could potentially generate Semantic-XR instances using these tags in real time.
+The tags below describe a tags-based approach for implementing a Semantic-XR generator. Once this input is provided, a game engine library could potentially generate Semantic-XR instances using these tags in real time.
   
 ## Functions for SemanticXr class object
     generateSemanticXr(schemaVersion: String) -> JSON
