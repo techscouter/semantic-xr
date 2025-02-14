@@ -5,7 +5,7 @@
 * [Video of a Real Time 3D game (video)](https://youtu.be/Q7JY3w7StHo)
 
 ## Movie
-* Movies' accessibility can be highly improved by audio description tracks that for example can be built with all the huge amount of information included in the Semantic-XR. These audio description tracks (created in realtime or offline) can be made available as text to a screen reader to listen to in a fast or a slow manner as the user wishes with their preferred voice. Not only listening but also using all the other Accessibility Solutions that can be created for Semantic-XR like spatial audio scans of entities’ names etc. if the Semantic-XR is provided as metadata to the movie. An example for this is the video mentioned above describing [a video of a real time 3D game with a solution that is applicable to any video which includes Semantic-XR metadata](https://youtu.be/Q7JY3w7StHo)
+* Movies' accessibility can be highly improved by audio description tracks that for example can be built with all the huge amount of information included in the movie's externalized Semantic-XR. These audio description tracks (created in realtime or offline) can be made available as text to a screen reader to listen to in a fast or a slow manner as the user wishes with their preferred voice. Not only listening but also using all the other Accessibility Solutions that can be created for Semantic-XR like spatial audio scans of entities’ names etc. if the Semantic-XR is provided as metadata to the movie. An example for this is the video mentioned above describing [a video of a real time 3D game with a solution that is applicable to any video which includes Semantic-XR metadata](https://youtu.be/Q7JY3w7StHo)
 * [Movie that includes Semantic-XR metadata with depthMap images used for highlighting objects in a video and an image (video)](https://youtu.be/gh0vJOWk5EY)
 * A complete movie can be represented in Semantic-XR format by having no realityInstanceId and no realityInstanceTimestamp in the highest level semanticXr element. Child Semantic-XR entities do have timestamp and they represent frames in the movie. Virtual production methods using a game engine based Semantic-XR library could enable auto-generation of movie semantic descriptions. This could apply as well to animations. BTW, this opens up the possibility of "invisible movies" - movies that exist as text-only in a Semantic-XR format. Another possibility is annotating old movies with Semantic-XR metadata to make them more accessible.
 
@@ -13,10 +13,47 @@
 * [Audio-based AR (video).](https://youtu.be/Lsri6037iIE) This example uses AI (object recognition cloud service) in contrast to other examples which use a game engine library to generate the Semantic-XR content.
 
 ## Composite Semantic-XR
-* For example a computer screen or a cinema screen inside a VR experience or photographs or TV shows in passthrough mode which are Semantic-XR entities by themselves (advanced usage of this could be used for reflections and\ or views behind transparent surfaces).
+* For example a computer screen or a cinema screen inside a VR experience or photographs or TV shows in passthrough mode which are Semantic-XR entities by themselves. Another example would be photos or videos taken within an XR Experience that can have Semantic-XR metadata being attached to them that will be associated with them whether these photos or movies are displayed in the XR Experience itself somewhere or exported from the XR Experience. Advanced usage of Composite Semantic-XR could be used for reflections and\ or views behind transparent surfaces.
 
 ## crossSemanticXrEquality examples
 This single field opens up a lot of opportunities, such as conveying equality of entities in space and time. For example:
+
+### Multi-player game
+Different players share the same game entities at more or less the same time. Note the absence of realityInstanceTimestamp (as they are more or less equal for all) and the absence of semanticSpatialEntityId (as they are equal for all).
+  
+        "crossSemanticXrEquality":
+        [
+            {
+                "realityId": "DemoGameCubesMultiplayer",
+                "realityInstanceId": "DemoGameCubesMultiplayer|6hdkil9uejdoek3o|Server"
+            },
+            {
+                "realityId": "DemoGameCubesMultiplayer",
+                "realityInstanceId": "DemoGameCubesMultiplayer|6hdkil9uejdoek3o|Player1"
+            },
+            {
+                "realityId": "DemoGameCubesMultiplayer",
+                "realityInstanceId": "DemoGameCubesMultiplayer|6hdkil9uejdoek3o|Player2"
+            },
+        ]
+
+### Game streaming on a slow internet connection
+Note the 2 seconds delay between the server and the game played by player 3.
+
+        "crossSemanticXrEquality":
+        [
+            {
+                "realityId": "DemoGameCubesMultiplayer",
+                "realityInstanceId": "DemoGameCubesMultiplayer|6hdkil9uejdoek3o|Server",
+                "realityInstanceTimestamp": 20
+
+            },
+            {
+                "realityId": "DemoGameCubesMultiplayer",
+                "realityInstanceId": "DemoGameCubesMultiplayer|6hdkil9uejdoek3o|Player3",
+                "realityInstanceTimestamp": 22
+            }
+        ]
 
 ### Live Broadcast
 In this case, there is the event and the live TV broadcast shown on two specific TV sets that are all synced in time. Note the absence of realityInstanceTimestamp (time is the same in all 3 realities) and the absence of semanticSpatialEntityId (entities are the same in all realities).
@@ -97,43 +134,6 @@ In this case, we have a game that is played, a movie of the game at regular spee
             ],
         ]
 
-### Multi-player game
-Different players share the same game entities at more or less the same time. Note the absence of realityInstanceTimestamp (as they are more or less equal for all) and the absence of semanticSpatialEntityId (as they are equal for all).
-  
-        "crossSemanticXrEquality":
-        [
-            {
-                "realityId": "DemoGameCubesMultiplayer",
-                "realityInstanceId": "DemoGameCubesMultiplayer|6hdkil9uejdoek3o|Server"
-            },
-            {
-                "realityId": "DemoGameCubesMultiplayer",
-                "realityInstanceId": "DemoGameCubesMultiplayer|6hdkil9uejdoek3o|Player1"
-            },
-            {
-                "realityId": "DemoGameCubesMultiplayer",
-                "realityInstanceId": "DemoGameCubesMultiplayer|6hdkil9uejdoek3o|Player2"
-            },
-        ]
-
-### Game streaming on a slow internet connection
-Note the 2 seconds delay between the server and the game played by player 3.
-
-        "crossSemanticXrEquality":
-        [
-            {
-                "realityId": "DemoGameCubesMultiplayer",
-                "realityInstanceId": "DemoGameCubesMultiplayer|6hdkil9uejdoek3o|Server",
-                "realityInstanceTimestamp": 20
-
-            },
-            {
-                "realityId": "DemoGameCubesMultiplayer",
-                "realityInstanceId": "DemoGameCubesMultiplayer|6hdkil9uejdoek3o|Player3",
-                "realityInstanceTimestamp": 22
-            }
-        ]
-
 ### Time travel in a movie
 A character (Human1) that appears throughout a movie (TimeTravelMovie1) and appears in the reality underlying that movie at two points in time, 20 years apart. Time units is days. The section below means that December 18 is being spent in 1995 and December 19 is being spent in 1975.
 
@@ -210,7 +210,7 @@ Tracking a character that moved between two virtual worlds. In the example below
             }
         ]
 
-`crossSemanticXrEquality` field can also be used to describe portals between multiple realities. For example the following field describes a portal that connect two reality instances:
+`crossSemanticXrEquality` field can also be used to describe portals between multiple realities. For example the following field describes a portal that connects two reality instances:
 
         "crossSemanticXrEquality":
         [
@@ -229,10 +229,10 @@ Tracking a character that moved between two virtual worlds. In the example below
 
 
 ### Calibration
-An example of that would be calibrating between the real world and an Augmented Reality Experience by describing the identity of marker entities using crossSemanticXrEquality.
+An example of that would be calibrating between the real world and an Augmented Reality Experience by describing the identity of marker entities using crossSemanticXrEquality. Another example could be calibrating between a real world entity and its digital twin.
 
 ### Exercise for the reader :smiley: (1)
 Representing different physics and philosophical theories of the world using Semantic-XR.
 
 ### Exercise for the reader :smiley: (2)
-See message of commit cd4e2e34f2a061f0436678211cb4375ca4276d96 in this repository for more examples.
+See message of commit `cd4e2e34f2a061f0436678211cb4375ca4276d96` in this repository for more examples.

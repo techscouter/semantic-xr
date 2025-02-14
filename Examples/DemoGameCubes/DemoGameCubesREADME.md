@@ -18,7 +18,7 @@ Below are images taken while playing the demo game and generating Semantic-XR at
             
                 "pointsOfCollisionPrediction": [
 			        {
-                        "collisionPrediction":[
+                        "collisionsPredictions":[
                             {"directionName": "forward", "name":"obstacle"}
                         ]
                     }
@@ -36,7 +36,7 @@ Below are images taken while playing the demo game and generating Semantic-XR at
   * Image
 
     ![A single large cube on the floor and a surrounding wall and cloudy sky](DemoGameCubes2.png)  
-  * Semantic-XR (relative to previous Semantic-XR, semanticSpatialEntities section was added with one cube and a collisionPrediction distance field was added)
+  * Semantic-XR (relative to previous Semantic-XR, semanticSpatialEntities section was added with one cube and a collision prediction distance field was added)
 
         {
             "semanticXr":{
@@ -52,7 +52,7 @@ Below are images taken while playing the demo game and generating Semantic-XR at
                 
                 "pointsOfCollisionPrediction": [
 			        {
-                        "collisionPrediction":[
+                        "collisionsPredictions":[
                             {"directionName": "forward", "name":"obstacle", "distance":1701}
                         ]
                     }
@@ -87,7 +87,7 @@ Below are images taken while playing the demo game and generating Semantic-XR at
 
                 "pointsOfCollisionPrediction": [
 			        {
-                        "collisionPrediction":[
+                        "collisionsPredictions":[
                             {"directionName": "forward", "name":"obstacle", "distance":2221}
                         ]
                     }
@@ -105,7 +105,7 @@ Below are images taken while playing the demo game and generating Semantic-XR at
   * Image
 
     ![Five gray cubes, plus one destination blue cube right in the center of the field of view. All surrounded by a wall and cloudy sky](DemoGameCubes4.png)  
-  * Semantic-XR (now there are six cubes in the semanticSpatialEntities section and collisionPrediction points to the destination)
+  * Semantic-XR (now there are six cubes in the semanticSpatialEntities section and collision prediction points to the destination)
 
         {
             "semanticXr":{
@@ -126,7 +126,7 @@ Below are images taken while playing the demo game and generating Semantic-XR at
 
                 "pointsOfCollisionPrediction": [
 			        {
-                        "collisionPrediction":[
+                        "collisionsPredictions":[
                             {"directionName": "forward", "name":"destination", "distance":1019, "semanticSpatialEntityId":"EditorCube11"}
                         ]
                     }
@@ -161,7 +161,7 @@ Below are images taken while playing the demo game and generating Semantic-XR at
 
                 "pointsOfCollisionPrediction": [
 			        {
-                        "collisionPrediction":[
+                        "collisionsPredictions":[
                             {"directionName": "forward", "name":"destination", "distance":321, "semanticSpatialEntityId":"EditorCube11"}
                         ]
                     }
