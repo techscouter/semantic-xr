@@ -1,3 +1,6 @@
+**_Note: This repository has been archived with read-only mode in order for future work on it to happen at a standards organization. It is currently not in any way a standard or even a draft standard and is a proposal for further community discussion._**
+
+
 # Introduction
 This repository describes an accessibility-focused semantic 3D scene description format named Semantic-XR: a description of an XR experience as meaningful and well-defined data in order to make it more accessible.
 
