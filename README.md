@@ -1,4 +1,4 @@
-**_Note: This repository has been archived with read-only mode in order for future work on it to happen at a standards organization. It is currently not in any way a standard or even a draft standard and is a proposal for further community discussion._**
+**_Note: This repository has been archived with read-only mode in order for future work on it to happen at a standards organization. It is a proposal for further community discussion._**
 
 
 # Introduction
