@@ -30,5 +30,7 @@ Here are several advantages of using Semantic-XR for Accessibility Solutions ove
 * Creator based descriptions (of entities or scenes for example) instead of external AI based ones.
 * Non visual metadata, like instructions for example.
 * Non visible content (via hidden semanticSpatialEntities or multiple pointsOfView for example).
+* Accurate semantic metadata, like very accurate locations (for example: of people, objects, rooms, buildings etc.).
 * Enabling Accessibility Solutions that are ready to be reused and operated (like a specific keyboard shortcut for a spatial audio based scene scan) instead of a long dialogue with an AI Large Language Model (LLM) so that it understands what it is asked for.
 * Hybrid approach - still use an AI to describe the scene and ask questions about it but the AI would have in addition to the image or video also the Semantic-XR metadata to work with.
+* Enables solutions with immediate real time feedback, for example in voice-based AI interactions with the content, without requiring "thinking" and analysis delays.
