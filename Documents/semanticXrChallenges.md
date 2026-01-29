@@ -9,6 +9,7 @@ Semantic-XR is still a **work in progress technology** and comes with several ch
     * Using a schemaVersion with a more limited scope.
     * Lower spatial resolution (for example for images).
     * Lower temporal resolution (frequency of updates).
+    * Multi-representation serialization - Semantic-XR can be expressed either as JSON like in the included schema. Alternatively, it can be realized in a variety of binary formats for more efficient performance, processing and data transfer.
     * Use more capable and powerful hardware.
 * Potential **abuse in competitive games**.
   * But...

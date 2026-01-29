@@ -36,7 +36,7 @@ First, let's go over the "Why?": please find below a list of many communities th
   * Compression - for example a Semantic-XR that includes a specific brand of a car seen in a certain location from a specific angle is a few bytes long but with proper rendering capabilities and prior knowledge of the car it can enable rendering a very high quality image of that car - enabling orders of magnitude levels of compression of media (idea discussed separately in the page about High Impact Experimental Ideas and mentioned in [my blog post from 2010 about Semantic Editing, Encoding and Decoding](https://blog.techscouter.net/techscouter/seed-semantic-editing-encoding-and-decoding)).
   
 # The Format
-The format itself is described in the file [semanticXr.json](/semanticXr.json) which is a JSON file that serves as a template for Semantic-XR content. Explanations for the format's fields can be found in the following [Semantic-XR Instructions document](/semanticXrInstructions.md).
+The format itself is described in the file [semanticXr.json](/semanticXr.json) which is a JSON file that serves as a "Schema by Example" or a template for Semantic-XR content and to be used along with its documentation. Documentation and explanations for the format's fields can be found in the following [Semantic-XR Instructions document](/semanticXrInstructions.md).
 
 # Examples
 ## Example Image with a Semantic-XR Representation
